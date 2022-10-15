@@ -281,18 +281,133 @@ main{
 }
 .personal-info-right{
   width: 40%;
+  font-family: "Inter", sans-serif;
   .content-personal-info-right{
-    background: #eeeeee;
     color: #000;
-    border-radius: 20px;
     height: 500px;
     width: 300px;
     position: fixed;
     bottom: 10%;
-    padding: 20px;
-    h2{
+    font-family: 'Roboto', sans-serif;
+    .design{
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      text-shadow: 3px 3px 20px $green,
+          -2px 1px 30px $purple;
+    }
+    .moindre{
+      margin: 20px;
+      line-height:27px;
+    }
+    
+    .detail{
+      color: #333;
       font-size: 1.3em;
+      -webkit-text-stroke: 1px #282828;
+      text-shadow: 0px 4px 4px #282828;
+    }
+    .text-phone{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      font-size: 3em;
       text-align: center;
+      font-family: 'Roboto', sans-serif;
     }
   }
 }
+
+@keyframes pisca{
+  0% {
+    background-color: #333;
+    box-shadow: 0px 0px 0px 0px #333;
+  }
+  50%{
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #fff;
+  }
+  100%{
+    background-color: #333;
+    box-shadow: 0px 0px 0px 0px #333;
+  }
+}
+
+.notification.on .badge{
+  height: 8px;
+  width: 8px;
+  display: table;
+  position: absolute;
+  float: left;
+  background-color: #333;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 25px;
+  box-shadow: none;
+  animation: pisca 1s infinite;
+}
+
+.screen{
+  height: 450px;
+  width: 300px;
+  background-color: #ffffff;
+  background-image: linear-gradient(329deg, #ffffff 0%, #9403f4 100%);
+  border: solid 2px #222;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.smartphone{
+  display: table;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #333;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  border: solid 1px #222;
+}
+
+.btn-up-down{
+  height: 100px;
+  float: left;
+  position: absolute;
+  margin-left: -17px;
+  margin-top: 90px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.btn{
+  display: table;
+  display: none;
+  width: 8px;
+  background-color: #333;
+}
+
+.cam{
+  border-radius: 15px;
+  height: 15px;
+  width: 15px;
+  display: table;
+  background-color: #444;
+  border: solid 1px #222;
+  margin: 0 auto;
+  margin-top: 15px;
+  
+}
+
+.controls, .header-phone{
+  height: 30px;
+  display: table;
+  width: 100%;
+  
+}
+
+.emoji{
+  height: 40px;
+  width: 40px;
+}
+
