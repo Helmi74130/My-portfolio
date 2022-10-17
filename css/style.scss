@@ -1,19 +1,36 @@
-/* .video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -10;
-} */ 
 $purple:#9403f4;
 $green:#00ffa5;
 
 body{
   color: white;
   background: linear-gradient(to left, #434343 0%, black 100%);
-  //height: 10000px;
+
+}
+a{
+  cursor: url("../icon/mouse2.ico"), default;
+}
+::-webkit-scrollbar{
+  width: 0;
+  background: transparent;
+}
+.scrollbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 0;
+  opacity: 0;
+  background: linear-gradient(to top, $green, $green );
+  z-index: 110;
+}
+.clickScrollbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background: rgba(226, 207, 207, 0);
+  z-index: 110;
 }
 .menu-icon {
 	position: relative;
@@ -471,21 +488,65 @@ main{
   .project-left{
     width: 30%;
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: space-between;
     color: white;
+    h4{
+      margin-top: 20px;
+    }
+    .controls-screen{
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      .button-tabs{
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid $green;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+        box-shadow: 0 0 40px 40px black inset, 0 0 0 0 black;
+        transition: all 150ms ease-in-out;
+        &:hover,
+        &:focus {
+          color: #fff;
+          outline: 0;
+        }
+        &:hover {
+          box-shadow: 0 0 10px 0 $green inset, 0 0 10px 4px $green;
+        }
+      }
+    }
+    p{
+      margin-bottom: 150px;
+      font-size: 1.3em;
+      color: #9797a1;
+      text-align: center;
+      .design{
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 3px 3px 10px $green,
+            -2px 1px 30px $purple;
+      }
+    }
   }
   .project-right{
     width: 70%;
     padding: 20px;
     padding-bottom: 150px;
+    
   }
 }
-
 h4{
   font-size: 4em;
 }
-
 .ipad {
 	height: 100%;
   background: #000;
@@ -500,5 +561,28 @@ h4{
     width: 100%;
     border-radius: 10px;
   }
+}
+
+.a{
+  background: linear-gradient(to left, #434343 0%, black 100%);
+  z-index: 100;
+}
+.one{
+  .panel-left{
+    h5{
+      font-size: 4em;
+      color: $purple;
+    }
+    width: 35%;
+    height: 100%;
+  }
+  .panel-right{
+    width: 65%;
+    height: 100%;
+    //background-color: #9403f4;
+    background-image: linear-gradient(43deg, #9403f4 0%, #e0e5e0 100%);
+
+  }
+  
 
 }
