@@ -11,6 +11,13 @@ const videoTablette = document.querySelector('#videoTablette')
 const linkForWebSite = document.querySelector('#linkForWebSite')
 const progressBar = document.querySelector('.scrollbar')
 const progressBarClick = document.querySelector('.clickScrollbar')
+const phoneInput = document.querySelector('#phoneInput')
+const sendMessageButton = document.querySelector('#sendMessageButton')
+const phoneMessage = document.querySelector('#phoneMessage')
+const phoneMessageOfMe = document.querySelector('#phoneMessageOfMe')
+const timeMessage = document.querySelectorAll('.time')
+const helloText = document.querySelector('#helloText')
+const longText = document.querySelector('#longText')
 
 
 /* this function allows you to navigate by clicking on the progressbar */
@@ -62,6 +69,7 @@ buttonMenu.addEventListener('click', ()=>{
   .typeString('<span style="color: #00ffa5;"> FULL-STACK !</span> ')
   .start();
 
+/* this function remove class and add class in the phone when scroll */
   addEventListener('scroll', () => {
     if (window.scrollY > 1150) {
       smartphone.classList.add("none")
@@ -86,6 +94,7 @@ phoneButton.addEventListener('click', ()=>{
   }
 })
 
+/* this function allows to make a panel of slides */
 window.onload = function () {
   let controller = new ScrollMagic.Controller({
     globalSceneOptions:{
@@ -104,6 +113,7 @@ window.onload = function () {
   }
 }
 
+/* this two function change video source and url */
 const urlSource =['video/l\'illustre.mp4', 'video/richardsordi.mp4', 'video/richardvid.mp4' ]
 const url =['https://illustre-restaurant.herokuapp.com/', 'https://richards-immobilier.herokuapp.com/', 'https://earth-and-sea.herokuapp.com/' ]
 
@@ -132,3 +142,54 @@ previous.addEventListener('click', ()=>{
       linkForWebSite.href = url[index]
     }
 })
+
+phoneInput.addEventListener('input', (e)=>{
+  //console.log(e.target.value);
+})
+
+let dateNow = new Date()
+let hour = dateNow.getHours()
+let minutes = dateNow.getMinutes()
+
+/* this loop  writes the time for each message sent*/
+for (let i = 0; i < timeMessage.length; i++) {
+  timeMessage[i].textContent = hour+':'+minutes
+}
+
+let welcomeText = ['Hey!!', 'Salut!', 'Bienvenue!', 'Bonjour!', '&#128075;', '&#x1F91A;']
+let phoneText = ['Bonne visite sur mon site!', 'Enchanté moi c\'est Helmi &#x1F44D;', 'Tu as pensé à me contacter? &#x1F4BB;', 'Oublie pas de me dire si tu as apprécié la visite', 'Si tu veux en savoir plus hésite pas à me contacter &#9997;']
+
+helloText.innerHTML = welcomeText[Math.floor(Math.random() * welcomeText.length)];
+longText.innerHTML = phoneText[Math.floor(Math.random() * phoneText.length)];
+
+sendMessageButton.addEventListener('click', ()=>{
+  let message = phoneInput.value
+
+  if (message.length > 400) {
+    phoneMessageOfMe.innerHTML +=`
+      <div class="phone-text first-right-message right-message">
+        <p>Attention ton message est trop long !</p>
+        <div class="phone-seen">
+          <p class="time"></p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+            <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+          </svg>
+        </div>
+      </div>
+      `
+  }else {
+    phoneMessage.innerHTML +=`
+      <div class="phone-text left-message first-left-message">
+        <p>${message}</p>
+        <div class="phone-seen">
+          <p>${hour}:${minutes}</p>
+        </div>
+      </div>
+      `
+  }
+  phoneInput.value =""
+})
+
+
+
+

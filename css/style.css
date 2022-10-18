@@ -412,43 +412,6 @@ main .personal h1 .my-name {
   font-family: 'Roboto', sans-serif;
 }
 
-.personal-info-right .content-personal-info-right .design {
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 3px 3px 20px #00ffa5, -2px 1px 30px #9403f4;
-}
-
-.personal-info-right .content-personal-info-right .moindre {
-  margin: 20px;
-  line-height: 27px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-.personal-info-right .content-personal-info-right .detail {
-  color: #333;
-  font-size: 1.3em;
-  -webkit-text-stroke: 1px #282828;
-  text-shadow: 0px 4px 4px #282828;
-}
-
-.personal-info-right .content-personal-info-right .text-phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 3em;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-}
-
 @-webkit-keyframes pisca {
   0% {
     background-color: #333;
@@ -501,12 +464,262 @@ main .personal h1 .my-name {
           animation: pisca 1s infinite;
 }
 
-.screen {
+.screen-phone {
+  position: relative;
   height: 450px;
   width: 300px;
-  background-color: #ffffff;
-  background-image: linear-gradient(329deg, #ffffff 0%, #9403f4 100%);
-  border: solid 2px #222;
+  background: url("../img/whatsapp.jpg") repeat;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  color: white;
+  overflow-y: scroll;
+}
+
+.screen-phone .phone-header {
+  width: 100%;
+  height: 20px;
+  background: #074d43;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.screen-phone .phone-header svg {
+  margin-left: 8px;
+}
+
+.screen-phone .subphone-header {
+  width: 100%;
+  height: 40px;
+  background: #075d55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.screen-phone .subphone-header .left-content-subphone-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen-phone .subphone-header .left-content-subphone-header img {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.screen-phone .subphone-header .left-content-subphone-header p {
+  font-size: 0.5em;
+}
+
+.screen-phone .subphone-header .left-content-subphone-header p:first-child {
+  font-size: 0.8em;
+  font-weight: bolder;
+}
+
+.screen-phone .subphone-header .right-content-subphone-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen-phone .subphone-header .right-content-subphone-header svg {
+  margin-right: 10px;
+}
+
+.screen-phone .phone-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+.screen-phone .phone-content .phone-text {
+  color: #000;
+  margin-top: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 220px;
+  border-radius: 10px;
+}
+
+.screen-phone .phone-content .phone-text p {
+  padding: 10px;
+  font-size: 0.8em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.screen-phone .phone-content .phone-text .phone-seen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.screen-phone .phone-content .phone-text .phone-seen p {
+  padding: 0;
+  font-size: 0.6em;
+}
+
+.screen-phone .phone-content .phone-text .phone-seen svg {
+  color: #00aeff;
+}
+
+.screen-phone .right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-right: 20px;
+}
+
+.screen-phone .right .right-message {
+  background: #E1FFC7;
+}
+
+.screen-phone .right .first-right-message::after {
+  content: '';
+  position: absolute;
+  background: #E1FFC7;
+  height: 10px;
+  width: 20px;
+  right: 20px;
+  border-radius: 0% 100% 100% 0% / 0% 0% 100% 0%;
+}
+
+.screen-phone .left {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 20px;
+  margin-bottom: 90px;
+}
+
+.screen-phone .left .first-left-message::after {
+  content: '';
+  position: absolute;
+  background: #ffffff;
+  height: 10px;
+  width: 20px;
+  left: 20px;
+  border-radius: 0% 100% 0% 100% / 0% 0% 100% 100%;
+}
+
+.screen-phone .left .left-message {
+  background: white;
+}
+
+.screen-phone .footer-phone {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen-phone .footer-phone .phone-placeholder {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #ffffff;
+  width: 70%;
+  margin-left: 5px;
+  border-radius: 20px;
+  color: #000;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.screen-phone .footer-phone .phone-placeholder input {
+  border: none;
+}
+
+.screen-phone .footer-phone .phone-placeholder input:focus {
+  border: none;
+  outline: none;
+}
+
+.screen-phone .footer-phone .phone-send {
+  height: 40px;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.screen-phone .footer-phone .phone-send button {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: #008a7c;
+  border: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.screen-phone .footer-phone .phone-send button:hover {
+  cursor: pointer;
+}
+
+.home-phone {
+  position: relative;
+  height: 450px;
+  width: 300px;
+  background: url("../img/wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: 20px;
   margin-bottom: 25px;
   -o-object-fit: cover;
@@ -514,15 +727,202 @@ main .personal h1 .my-name {
   border-radius: 5px;
 }
 
+.home-phone .filter {
+  height: 100%;
+  width: 100%;
+  background: #000000d8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+
+.home-phone .filter .header-call {
+  width: 100%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+.home-phone .filter .header-call img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.home-phone .filter .header-call p {
+  margin-bottom: 10px;
+}
+
+.home-phone .filter .main-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.home-phone .filter .main-call .icon-call-reception {
+  background: #14cd5e;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-phone .filter .main-call .icon-call-reception:hover {
+  cursor: pointer;
+}
+
+.home-phone .filter .main-call .icon-call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.home-phone .filter .footer-call {
+  text-align: center;
+  font-size: 0.8em;
+  color: #6b6b6b;
+}
+
+.shake {
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-1deg);
+            transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
 .smartphone {
   display: table;
   margin: 0 auto;
-  padding: 10px;
-  background-color: #333;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  padding: 8px;
+  background-color: #181818;
+  border-radius: 30px;
   position: relative;
   border: solid 1px #222;
 }
@@ -538,7 +938,7 @@ main .personal h1 .my-name {
   margin-top: 15px;
 }
 
-.smartphone button {
+.smartphone .phone-button {
   border-radius: 3px;
   padding-top: 5px;
   background: #272424;
@@ -552,7 +952,7 @@ main .personal h1 .my-name {
   top: 97%;
 }
 
-.smartphone button:hover {
+.smartphone .phone-button:hover {
   cursor: pointer;
 }
 

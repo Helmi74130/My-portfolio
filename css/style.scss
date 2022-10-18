@@ -313,34 +313,6 @@ main{
     position: fixed;
     bottom: 10%;
     font-family: 'Roboto', sans-serif;
-    .design{
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-      text-shadow: 3px 3px 20px $green,
-          -2px 1px 30px $purple;
-    }
-    .moindre{
-      margin: 20px;
-      line-height:27px;
-      margin-bottom: 50px;
-      margin-top: 50px;
-    }
-    
-    .detail{
-      color: #333;
-      font-size: 1.3em;
-      -webkit-text-stroke: 1px #282828;
-      text-shadow: 0px 4px 4px #282828;
-    }
-    .text-phone{
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      font-size: 3em;
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-    }
   }
 }
 
@@ -373,27 +345,263 @@ main{
   animation: pisca 1s infinite;
 }
 
-.screen{
+.screen-phone{
+  position: relative;
   height: 450px;
   width: 300px;
-  background-color: #ffffff;
-  background-image: linear-gradient(329deg, #ffffff 0%, #9403f4 100%);
-  border: solid 2px #222;
+  background: url("../img/whatsapp.jpg") repeat;
   margin-top: 20px;
   margin-bottom: 25px;
   object-fit: cover;
   border-radius: 5px;
+  color: white;
+  overflow-y:scroll;//
+  .phone-header{
+    width: 100%;
+    height: 20px;
+    background: #074d43;
+    display: flex;
+    justify-content: end;
+    svg{
+      margin-left: 8px;
+    }
+  }
+  .subphone-header{
+    width: 100%;
+    height: 40px;
+    background: #075d55;
+    display: flex;
+    justify-content: space-between;
+    .left-content-subphone-header{
+      display: flex;
+      align-items: center;
+      img{
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+      p{
+        font-size: 0.5em
+      }
+      p:first-child{
+        font-size: 0.8em;
+        font-weight: bolder;
+      }
+    }
+    .right-content-subphone-header{
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right:10px ;
+      }
+    }
+  }
+  .phone-content{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    .phone-text{
+      color: #000;
+      margin-top: 10px;
+      width: fit-content;
+      display: flex;
+      max-width: 220px;
+      border-radius: 10px;
+      p{
+        padding: 10px;
+        font-size: 0.8em;
+        text-overflow: ellipsis; 
+          overflow: hidden;
+          
+      }
+      .phone-seen{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        p{
+          padding: 0;
+          font-size: 0.6em;
+        }
+        svg{
+          color: rgb(0, 174, 255);
+        }
+      }
+    }
+  }
+  .right{
+    align-items: flex-end;
+    margin-right: 20px;
+    .right-message{
+      background: #E1FFC7;
+    }
+    .first-right-message::after{
+      content: '';
+      position: absolute;
+      background: #E1FFC7;
+      height: 10px;
+      width: 20px;
+      right:20px;
+      border-radius: 0% 100% 100% 0% / 0% 0% 100% 0% ;
+    }
+  }
+  .left{
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-bottom: 90px;
+    .first-left-message::after{
+      content: '';
+      position: absolute;
+      background: #ffffff;
+      height: 10px;
+      width: 20px;
+      left:20px;
+      border-radius: 0% 100% 0% 100% / 0% 0% 100% 100% 
+    }
+    .left-message{
+      background: white;
+    }
+  }
+  .footer-phone{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    .phone-placeholder{
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #ffffff;
+      width: 70%;
+      margin-left: 5px;
+      border-radius: 20px;
+      color: #000;
+      padding-left: 5px;
+      padding-right: 5px;
+      input{
+        border: none;
+        &:focus{
+          border: none;
+          outline:  none;
+        }
+      }
+    }
+    .phone-send{
+      height: 40px;
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button{
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        background: #008a7c;
+        border: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.home-phone{
+  position: relative;
+  height: 450px;
+  width: 300px;
+  background: url("../img/wallpaper.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  object-fit: cover;
+  border-radius: 5px;
+  .filter{
+    height: 100%;
+    width: 100%;
+    background: #000000d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    .header-call{
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      img{
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+      p{
+        margin-bottom: 10px;
+      }
+    }
+    .main-call{
+      display: flex;
+      width: 90%;
+      justify-content: space-around;
+      margin-bottom: 15px;
+      .icon-call-reception{
+        background: #14cd5e;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .icon-call{
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+    .footer-call{
+      text-align: center;
+      font-size: 0.8em;
+      color: rgb(107, 107, 107);
+    }
+  }
+}
+.shake{
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 .smartphone{
   display: table;
   margin: 0 auto;
-  padding: 10px;
-  background-color: #333;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  padding: 8px;
+  background-color: rgb(24, 24, 24);
+  border-radius: 30px;
   position: relative;
   border: solid 1px #222;
   .cam{
@@ -405,10 +613,9 @@ main{
     border: solid 1px #222;
     margin: 0 auto;
     margin-top: 15px;
-    
   }
   
-  button{
+  .phone-button{
     border-radius: 3px;
     padding-top: 5px;
     background: rgb(39, 36, 36);
@@ -617,3 +824,10 @@ h4{
   
 
 }
+
+
+
+
+
+
+
