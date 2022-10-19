@@ -797,11 +797,11 @@ h4{
   }
 }
 
-.a{
+.panel{
   background: linear-gradient(to left, #434343 0%, black 100%);
   z-index: 100;
 }
-.one{
+.competence{
   .panel-left{
     width: 40%;
     height: 100%;
@@ -834,11 +834,9 @@ h4{
   .panel-right{
     width: 60%;
     height: 100%;
-    padding: 20px;
-    padding-bottom: 500px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-image: linear-gradient(43deg, #9403f4 0%, #e0e5e0 100%);
     .icon-panel{
@@ -846,13 +844,35 @@ h4{
       display: flex;
       justify-content: center;
       align-items: center;
+      img:hover{
+        opacity: 0.8;
+      }
+      .mt{
+        margin-bottom: 50px;
+      }
     }
-  }
-  
+  } 
 }
-
-
-
+.about{
+  flex-direction: column;
+  //justify-content:center;
+  align-items: center;
+  .about-content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  h2{
+    font-size: 4em;
+  }
+  .text-about{
+    font-size: 2em;
+    text-align: justify;
+  }
+}
 
 
 

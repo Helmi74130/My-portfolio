@@ -1201,24 +1201,24 @@ h4 {
   border-radius: 10px;
 }
 
-.a {
+.panel {
   background: -webkit-gradient(linear, right top, left top, from(#434343), to(black));
   background: linear-gradient(to left, #434343 0%, black 100%);
   z-index: 100;
 }
 
-.one .panel-left {
+.competence .panel-left {
   width: 40%;
   height: 100%;
 }
 
-.one .panel-left h5 {
+.competence .panel-left h5 {
   font-size: 4em;
   text-align: center;
   margin-top: 40px;
 }
 
-.one .panel-left .subcontent {
+.competence .panel-left .subcontent {
   padding: 20px;
   margin-top: 30px;
   display: -webkit-box;
@@ -1234,7 +1234,7 @@ h4 {
   height: 65%;
 }
 
-.one .panel-left .subcontent h6 {
+.competence .panel-left .subcontent h6 {
   font-size: 2em;
   background: -webkit-gradient(linear, left bottom, right top, from(#9403F4), color-stop(90%, #E0E5E0));
   background: linear-gradient(to top right, #9403F4 0%, #E0E5E0 90%);
@@ -1242,33 +1242,30 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
-.one .panel-left .subcontent p {
+.competence .panel-left .subcontent p {
   font-size: 1.2em;
   margin-left: 10px;
   margin-top: 15px;
   color: #E0E5E0;
 }
 
-.one .panel-right {
+.competence .panel-right {
   width: 60%;
   height: 100%;
-  padding: 20px;
-  padding-bottom: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-image: linear-gradient(43deg, #9403f4 0%, #e0e5e0 100%);
 }
 
-.one .panel-right .icon-panel {
+.competence .panel-right .icon-panel {
   width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1279,5 +1276,47 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.competence .panel-right .icon-panel img:hover {
+  opacity: 0.8;
+}
+
+.competence .panel-right .icon-panel .mt {
+  margin-bottom: 50px;
+}
+
+.about {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .about-content {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.about h2 {
+  font-size: 4em;
+}
+
+.about .text-about {
+  font-size: 2em;
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */
