@@ -3,7 +3,6 @@ const modalHeader = document.querySelector('#modalHeader')
 const textWritter = document.querySelector('#textWritter')
 const phoneButton = document.querySelector('#phoneButton')
 const screen = document.querySelector('#screen')
-const video = document.querySelector('#video')
 const smartphone = document.querySelector('#smartphone')
 const previous = document.querySelector('#previous')
 const next = document.querySelector('#next')
@@ -18,7 +17,9 @@ const phoneMessageOfMe = document.querySelector('#phoneMessageOfMe')
 const timeMessage = document.querySelectorAll('.time')
 const helloText = document.querySelector('#helloText')
 const longText = document.querySelector('#longText')
-
+const acceptBtn = document.querySelector('#acceptBtn')
+const homePhone = document.querySelector('#homePhone')
+const smartphoneDiv = document.querySelector('#smartphoneDiv')
 
 /* this function allows you to navigate by clicking on the progressbar */
 let totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -72,26 +73,22 @@ buttonMenu.addEventListener('click', ()=>{
 /* this function remove class and add class in the phone when scroll */
   addEventListener('scroll', () => {
     if (window.scrollY > 1150) {
-      smartphone.classList.add("none")
-      smartphone.classList.remove("open")
+      smartphoneDiv.classList.add("close")
+      smartphoneDiv.classList.remove("open")
     }
     if (window.scrollY < 1150) {
-      smartphone.classList.remove("none")
-      smartphone.classList.add("open")
+      smartphoneDiv.classList.remove("close")
+      smartphoneDiv.classList.add("open")
     }
   }); 
 
 phoneButton.addEventListener('click', ()=>{
-  if (screen.classList.contains('none')) {
-    video.classList.add("none")
-    screen.classList.add("open")
+  acceptBtn.classList.add('to-up')
+  setTimeout(()=>{
+    smartphone.classList.remove("shake")
     screen.classList.remove("none")
-  }else{
-    screen.classList.add("none")
-    video.classList.add("open")
-    video.classList.remove("none")
-    
-  }
+    homePhone.classList.add("none")
+  }, 500)
 })
 
 /* this function allows to make a panel of slides */
@@ -114,13 +111,12 @@ window.onload = function () {
 }
 
 /* this two function change video source and url */
-const urlSource =['video/l\'illustre.mp4', 'video/richardsordi.mp4', 'video/richardvid.mp4' ]
-const url =['https://illustre-restaurant.herokuapp.com/', 'https://richards-immobilier.herokuapp.com/', 'https://earth-and-sea.herokuapp.com/' ]
+const urlSource =['video/l\'illustre.mp4', 'video/richardsordi.mp4' ]
+const url =['https://illustre-restaurant.herokuapp.com/', 'https://richards-immobilier.herokuapp.com/' ]
 
 let index = 0
 next.addEventListener('click', ()=>{
   index++
-  console.log(videoTablette.src);
     if ( urlSource.length === index) {
       videoTablette.src=urlSource[0]
       linkForWebSite.href = url[0]
@@ -157,7 +153,7 @@ for (let i = 0; i < timeMessage.length; i++) {
 }
 
 let welcomeText = ['Hey!!', 'Salut!', 'Bienvenue!', 'Bonjour!', '&#128075;', '&#x1F91A;']
-let phoneText = ['Bonne visite sur mon site!', 'Enchanté moi c\'est Helmi &#x1F44D;', 'Tu as pensé à me contacter? &#x1F4BB;', 'Oublie pas de me dire si tu as apprécié la visite', 'Si tu veux en savoir plus hésite pas à me contacter &#9997;']
+let phoneText = ['Bonne visite sur mon site!', 'Enchanté moi c\'est Helmi &#x1F44D;', 'Avez vous pensé à me contacter? &#x1F4BB;', 'Oubliez pas de me dire si vous avez apprécié la visite', 'Si vous voulez en savoir plus n\'hésitez pas à me contacter &#9997;']
 
 helloText.innerHTML = welcomeText[Math.floor(Math.random() * welcomeText.length)];
 longText.innerHTML = phoneText[Math.floor(Math.random() * phoneText.length)];
@@ -188,6 +184,16 @@ sendMessageButton.addEventListener('click', ()=>{
       `
   }
   phoneInput.value =""
+})
+
+acceptBtn.addEventListener('click', ()=>{
+  acceptBtn.classList.add('to-up')
+
+  setTimeout(()=>{
+    smartphone.classList.remove("shake")
+    screen.classList.remove("none")
+    homePhone.classList.add("none")
+  }, 500)
 })
 
 
