@@ -4,8 +4,12 @@ body {
   background: linear-gradient(to left, #434343 0%, black 100%);
 }
 
-a {
-  cursor: url("../icon/mouse2.ico"), default;
+::-moz-selection {
+  color: #9403f4;
+}
+
+::selection {
+  color: #9403f4;
 }
 
 ::-webkit-scrollbar {
@@ -1045,15 +1049,15 @@ main .personal h1 .my-name {
   width: 40px;
 }
 
-.section-left {
-  width: 65%;
-  padding: 50px;
-}
-
-.section-left .design {
+.design {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   text-shadow: 3px 3px 20px #00ffa5, -2px 1px 30px #9403f4;
+}
+
+.section-left {
+  width: 65%;
+  padding: 50px;
 }
 
 .section-left h2 {
@@ -1201,6 +1205,10 @@ h4 {
   border-radius: 10px;
 }
 
+.ipad video:hover {
+  cursor: url("../icon/mouse2.ico"), default;
+}
+
 .panel {
   background: -webkit-gradient(linear, right top, left top, from(#434343), to(black));
   background: linear-gradient(to left, #434343 0%, black 100%);
@@ -1287,17 +1295,19 @@ h4 {
 }
 
 .about {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .about .about-content {
-  width: 40%;
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1305,6 +1315,9 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1313,10 +1326,69 @@ h4 {
 
 .about h2 {
   font-size: 4em;
+  background: linear-gradient(67deg, #5c5c5e 12%, #00ffa5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about .text-about {
-  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.8em;
   text-align: justify;
+  line-height: 1.5em;
+}
+
+.about .find-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .find-me p {
+  font-size: 1.3em;
+}
+
+.about .find-me a {
+  margin-inline: 0.5em;
+  color: #00ffa5;
+}
+
+.about .content-circle-left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 70%;
+  z-index: -10;
+}
+
+.about .content-circle-right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+.about .circle {
+  background-color: #0e0e0f;
+  background-image: linear-gradient(67deg, #0e0e0f 12%, #00ffa5 81%);
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  height: 50px;
+  width: 50px;
 }
 /*# sourceMappingURL=style.css.map */
