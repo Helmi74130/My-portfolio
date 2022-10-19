@@ -72,6 +72,7 @@ buttonMenu.addEventListener('click', ()=>{
 
 /* this function remove class and add class in the phone when scroll */
   addEventListener('scroll', () => {
+
     if (window.scrollY > 1150) {
       smartphoneDiv.classList.add("close")
       smartphoneDiv.classList.remove("open")
@@ -139,9 +140,9 @@ previous.addEventListener('click', ()=>{
     }
 })
 
-phoneInput.addEventListener('input', (e)=>{
-  //console.log(e.target.value);
-})
+/* phoneInput.addEventListener('input', (e)=>{
+  console.log(e.target.value);
+}) */
 
 let dateNow = new Date()
 let hour = dateNow.getHours()
@@ -208,6 +209,3 @@ function parallax(e){
     Layer.style.transform = `translateX(${x}px) translateY(${y}px)`
   })
 }
-
-
-

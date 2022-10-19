@@ -916,8 +916,57 @@ h4{
     border-radius:50% 50% 50% 50% / 50% 50% 50% 50% ;
     height: 50px;
     width: 50px;
+  } 
+}
+.contact{
+  display: flex;
+  width: 100%;
+  .contact-left{
+    padding-left: 60px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .title-contact{
+      h3{
+        font-size: 4em;
+      }
+      p{
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 2em;
+        color: #5c5c5e;
+      }
+    }
+    .content-contact{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 30%;
+      font-size: 1.7em;
+      .join{
+        display: flex;
+        align-items: center;
+      }
+      svg{
+        margin-right: 10px;
+      }
+      a{
+        color: #fff;
+      }
+    }
+    .social-nav{
+      svg{
+        color: #fff;
+        margin-right: 20px;
+      }
+    }
   }
-  
+  .contact-right{
+    width: 60%;
+    background: blue;
+
+  }
 }
 
 
