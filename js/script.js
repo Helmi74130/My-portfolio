@@ -20,6 +20,9 @@ const longText = document.querySelector('#longText')
 const acceptBtn = document.querySelector('#acceptBtn')
 const homePhone = document.querySelector('#homePhone')
 const smartphoneDiv = document.querySelector('#smartphoneDiv')
+const submit = document.querySelector('#submit')
+const mail = document.querySelector('#mail')
+
 
 /* this function allows you to navigate by clicking on the progressbar */
 let totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -52,8 +55,6 @@ buttonMenu.addEventListener('click', ()=>{
 /* this function write automatically */
   new Typewriter(textWritter,{
   })
-  .typeString("!")
-  .deleteChars(2)
   .typeString(', Dev')
   .typeString('<span style="color: #00ffa5;"> JAVASCRIPT !</span>')
   .pauseFor(2000)
@@ -209,3 +210,23 @@ function parallax(e){
     Layer.style.transform = `translateX(${x}px) translateY(${y}px)`
   })
 }
+
+function ValidateEmail(input) {
+  var validRegex = /^\S+@\S+\.\S+$/;
+
+  if (input.value.match(validRegex)) {
+
+   console.log("Valid email address!");
+    return true;
+  } else {
+    console.log("INValid email address!");
+    return false;
+  }
+}
+
+submit.addEventListener('click', (e)=>{
+  e.stopPropagation()
+  e.preventDefault()
+  ValidateEmail(mail)
+})
+

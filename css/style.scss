@@ -4,10 +4,13 @@ $green:#00ffa5;
 body{
   color: white;
   background: linear-gradient(to left, #434343 0%, black 100%);
-  
+ 
+}
+html{
+  scroll-behavior: smooth;
 }
 ::selection {
-  color: $purple;
+  background: $purple;
  }
 
 ::-webkit-scrollbar{
@@ -71,11 +74,11 @@ body{
 
 		&:first-of-type {
 			top: 0;
-      background-color:#00ffa5;
+      background-color:#fff;
 		}
 		&:last-of-type {
 			bottom: 0;
-      background-color:$green;
+      background-color:#fff;
 		}
 	}
 	&.active,
@@ -137,7 +140,6 @@ body{
 }
 .none{
   display: none;
-  //z-index: -1000;
   animation: fade-out 1s ease-out both;
 }
 
@@ -178,11 +180,14 @@ body{
       margin-left: 20px;
     }
     .menu-social{
-      margin-right: 20px;
+      margin-right: 40px;
       display: flex;
       justify-content: space-between;
       width: 100px;
       font-family: 'Times New Roman', Times, serif;
+      a{
+        margin-right: 20px;
+      }
     }
   }
 }
@@ -204,7 +209,6 @@ a.effect-shine:hover {
   from {
     -webkit-mask-position: 150%;
   }
-  
   to {
     -webkit-mask-position: -50%;
   }
@@ -285,7 +289,9 @@ main{
   &:hover:before {
     opacity: 1;
   }
-  
+  a{
+    color: #fff;
+  }
   &:after {
     z-index: -1;
     content: '';
@@ -356,7 +362,7 @@ main{
   object-fit: cover;
   border-radius: 5px;
   color: white;
-  overflow-y:scroll;//
+  overflow-y:scroll;
   .phone-header{
     width: 100%;
     height: 20px;
@@ -733,30 +739,6 @@ main{
       display: flex;
       justify-content: space-evenly;
       width: 100%;
-      .button-tabs{
-        box-sizing: border-box;
-        appearance: none;
-        background-color: transparent;
-        border: 2px solid $green;
-        border-radius: 50%;
-        height: 80px;
-        width: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        color: #fff;
-        box-shadow: 0 0 40px 40px black inset, 0 0 0 0 black;
-        transition: all 150ms ease-in-out;
-        &:hover,
-        &:focus {
-          color: #fff;
-          outline: 0;
-        }
-        &:hover {
-          box-shadow: 0 0 10px 0 $green inset, 0 0 10px 4px $green;
-        }
-      }
     }
     p{
       margin-bottom: 150px;
@@ -776,6 +758,30 @@ main{
     padding: 20px;
     padding-bottom: 150px;
     
+  }
+}
+.button-tabs{
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid $green;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 40px 40px transparent inset, 0 0 0 0 black;
+  transition: all 150ms ease-in-out;
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+  &:hover {
+    box-shadow: 0 0 10px 0 $green inset, 0 0 10px 4px $green;
   }
 }
 h4{
@@ -812,6 +818,7 @@ h4{
       font-size: 4em;
       text-align: center;
       margin-top: 40px;
+      color: $green;
     }
     .subcontent{
       padding: 20px;
@@ -822,9 +829,6 @@ h4{
       height: 65%;
       h6{
         font-size: 2em;
-        background: linear-gradient(to top right, #9403F4 0%, #E0E5E0 90%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
       }
       p{
         font-size: 1.2em;
@@ -841,7 +845,8 @@ h4{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(43deg, #9403f4 0%, #e0e5e0 100%);
+    background-image: linear-gradient(67deg, white 2%, #00ffa5 90%);
+    //background-image: linear-gradient(43deg, #9403f4 0%, #e0e5e0 100%);
     .icon-panel{
       width: 20%;
       display: flex;
@@ -871,9 +876,10 @@ h4{
   }
   h2{
     font-size: 4em;
-    background:  linear-gradient(67deg, #5c5c5e 12%, #00ffa5 100%);
+    color: $green;
+    /* background:  linear-gradient(67deg, #5c5c5e 12%, #00ffa5 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
   }
   .text-about{
     display: flex;
@@ -927,9 +933,11 @@ h4{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: relative;
     .title-contact{
       h3{
         font-size: 4em;
+        color: $green;
       }
       p{
         margin-top: 15px;
@@ -947,25 +955,79 @@ h4{
       .join{
         display: flex;
         align-items: center;
+        &:hover{
+          color: $green;
+        }
       }
       svg{
         margin-right: 10px;
       }
       a{
         color: #fff;
+        &:hover{
+          color: $green;
+        }
       }
     }
     .social-nav{
       svg{
         color: #fff;
         margin-right: 20px;
+        &:hover{
+          color: $green;
+        }
       }
+    }
+    .circle-contact{
+      background: linear-gradient(200deg, #0e0e0f 12%, #00ffa5 81%);
+      height: 280px;
+      width: 280px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -150px;
+      right: -20px;
     }
   }
   .contact-right{
     width: 60%;
-    background: blue;
-
+    display: flex;
+    justify-content: center;
+    form{
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 90%;
+      width: 100%;
+      .form-content{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        input{
+          width: 30%;
+        }
+      }
+      textarea{
+        width: 80%;
+        border: solid 1px $green;
+        resize: none;
+      }
+    }
+    input, textarea{
+      color: rgb(255, 255, 255);
+      border: none;
+      border-bottom: solid 1px $green;
+      background: none;
+      padding: 10px;
+      &::placeholder{
+        color: rgb(199, 196, 196);
+        font-size: 1.2em;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
   }
 }
 

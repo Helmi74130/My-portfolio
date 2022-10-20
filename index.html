@@ -20,15 +20,15 @@
       <div>
         <p>Découvrir...</p>
         <nav>
-          <a class="effect-shine active" href="">Projets</a>
-          <a class="effect-shine" href="">Contact</a>
-          <a class="effect-shine" href="">A propos</a>
-          <a class="effect-shine" href="">Compétences</a>
+          <a class="effect-shine active" href="#project">Projets</a>
+          <a class="effect-shine" href="#contact">Contact</a>
+          <a class="effect-shine" href="#about">A propos</a>
+          <a class="effect-shine" href="#competence">Compétences</a>
         </nav>
       </div>
-      <div>
-        <img height="450px" src="img/ordinateur.png" alt="" srcset="">
-      </div>
+      <!-- <div>
+        <img height="450px" src="img/human.png" alt="" srcset="">
+      </div> -->
     </div>
   </div>
   <div class="container-top">
@@ -46,11 +46,11 @@
         </div>
       </div>
       <div class="menu-social">
-        <a href="">
-          <img height="52px" width="52px" src="img/github4.png" alt="" srcset="">
+        <a target="_blank" href="https://github.com/Helmi74130">
+          <img height="52px" width="52px" src="img/github1.png" alt="" srcset="">
         </a>
-        <a href="">
-          <img height="52px" width="52px" src="img/linkedin1.png" alt="" srcset="">
+        <a target="_blank" href="">
+          <img height="52px" width="52px" src="img/linkedin.png" alt="" srcset="">
         </a>
       </div>
     </header>
@@ -58,10 +58,10 @@
   <main>
     <div class="personal">
       <div class="personal-info">
-        <h1>Moi c'est <span class="my-name">Helmi</span><span id="textWritter"></span></h1>
+        <h1>Moi c'est Helmi<span id="textWritter"></span></h1>
         <p class="text-top">Et, avant tout passionné par ce que je fait!</p>
         <p class="text-bottom">Un intérêt pour le design et les interfaces innovantes et une grande part d'imagination</p>
-        <button class="glow-on-hover">Let's chat!</button>
+        <button class="glow-on-hover"><a href="#contact">Contactez-moi !</a></button>
         <p class="project">Plusieurs projets terminés est en cours mais avant toute chose commençons</p>
       </div>
       <div id="smartphoneDiv" class="personal-info-right" >
@@ -221,7 +221,7 @@
     </div>
   </div>
   <!-- PANEL PROJECT -->
-    <section class="panel">
+    <section id="project" class="panel">
       <div class="project-left" data-aos="fade-up" data-aos-anchor-placement="top-center">
         <h4>Découvrez <br> mes projets</h4>
         <div class="controls-screen">
@@ -243,7 +243,7 @@
       </div>
     </section>
     <!-- PANEL COMPETENCE -->
-    <section class="panel competence a">
+    <section id="competence" class="panel competence a">
       <div class="panel-left">
         <h5>Mes competences</h5>
         <div class="subcontent">
@@ -314,7 +314,7 @@
       </div>
     </section>
     <!-- PANEL ABOUT -->
-    <section class="panel about">
+    <section id="about" class="panel about">
       <div class="about-content">
         <h2>Qui suis-je?</h2>
         <div class="text-about">
@@ -346,7 +346,7 @@
       </div>
     </section>
     <!-- PANEL CONTACT -->
-    <section class="panel contact">
+    <section id="contact" class="panel contact">
       <div class="contact-left">
         <div class="title-contact">
           <h3>Contact</h3>
@@ -366,7 +366,7 @@
           </div>
         </div>
         <div class="social-nav">
-          <a href="">
+          <a target="_blank" href="https://github.com/Helmi74130">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
@@ -377,9 +377,22 @@
             </svg>
           </a>
         </div>
+        <div class="circle-contact"></div>
       </div>
-      
-      <div class="contact-right"></div>
+      <div class="contact-right">
+        <form action="">
+          <div class="form-content">
+            <input id="name" type="text" required placeholder="Nom*">
+            <input id="firstname" type="text" required placeholder="Prénom*">
+          </div>
+          <div class="form-content">
+            <input id="mail" type="mail" required placeholder="E-mail*">
+            <input id="phone" type="number" required placeholder="Téléphone">
+          </div>
+            <textarea required name="message" id="message" cols="30" rows="12" placeholder="Votre Message"></textarea>
+            <button class="button-tabs" id="submit" type="submit">Envoyer</button>
+        </form>
+      </div>
     </section>
 
 </body>
