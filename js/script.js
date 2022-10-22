@@ -107,7 +107,6 @@ window.onload = function () {
       triggerElement: slides[i]
     })
     .setPin(slides[i])
-    .addIndicators()
     .addTo(controller)
   }
 }

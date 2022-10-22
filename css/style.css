@@ -1,5 +1,6 @@
 body {
   color: white;
+  width: 100%;
   background: -webkit-gradient(linear, right top, left top, from(#434343), to(black));
   background: linear-gradient(to left, #434343 0%, black 100%);
 }
@@ -298,7 +299,7 @@ main .personal {
 
 main .personal .personal-info {
   width: 100%;
-  padding: 50px;
+  padding: 50px 0px 50px 50px;
   color: #ffffff;
 }
 
@@ -1147,7 +1148,6 @@ main .personal h1 .my-name {
 
 .panel .project-right {
   width: 70%;
-  padding: 20px;
   padding-bottom: 150px;
 }
 
@@ -1577,19 +1577,12 @@ h4 {
   .personal-info-right, .smartphone {
     display: none;
   }
-  .personal {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+  /* .personal{
+    //width: 100%;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+    flex-direction: column;
+    justify-content: center;
+  } */
   .personal-info, .section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1603,7 +1596,6 @@ h4 {
             justify-content: center;
   }
   .personal-info .section-left, .section .section-left {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1720,23 +1712,32 @@ h4 {
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 825px) {
+  .clickScrollbar {
+    display: none;
+  }
+  .scrollbar {
+    display: none;
+  }
   .personal .personal-info h1 {
-    font-size: 1.7em;
+    font-size: 2.7em;
   }
   .personal .personal-info .text-top {
-    font-size: 1.4em;
+    font-size: 2em;
   }
   .personal .personal-info p.text-bottom {
     padding-right: 150px;
-    font-size: 1.3em;
+    font-size: 1.8em;
+  }
+  .personal-info .section-left, .section .section-left {
+    width: 90%;
   }
   .personal-info .section-left h2, .section .section-left h2 {
-    font-size: 2em;
+    font-size: 4em;
     width: 100%;
   }
   .personal-info .section-left h2 .ligne, .section .section-left h2 .ligne {
-    display: block;
+    display: none;
   }
   .personal-info .section-left h2 .emoji-second, .section .section-left h2 .emoji-second {
     height: 40px;
@@ -1745,8 +1746,11 @@ h4 {
     height: 40px;
   }
   .personal-info .section-left p, .section .section-left p {
-    font-size: 1.6em;
+    font-size: 2.7em;
     width: 100%;
+  }
+  .personal-info .section-left p .ligne, .section .section-left p .ligne {
+    display: none;
   }
   .project-panel {
     display: -webkit-box;
@@ -1780,11 +1784,24 @@ h4 {
   .project-panel .project-right .ipad {
     padding: 0;
   }
+  .text-about p {
+    font-size: 1.3em;
+  }
   .competence .panel-left {
     width: 100%;
   }
-  .competence .panel-left .subcontent h6 {
+  .competence .panel-left h5 {
+    margin-top: 60px;
+    font-size: 4em;
+  }
+  .competence .panel-left .subcontent {
     font-size: 2em;
+    margin-top: 60px;
+    color: #ffffff;
+  }
+  .competence .panel-left .subcontent p {
+    font-size: 1em;
+    color: #bbb9b9;
   }
   .competence .panel-right {
     display: none;
@@ -1797,9 +1814,12 @@ h4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .contact .contact-left {
-    width: 100%;
+    width: 60%;
   }
   .contact .contact-left .content-contact {
     display: none;
@@ -1825,9 +1845,43 @@ h4 {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 0;
+    width: 100%;
+  }
+  .contact .contact-right form .form-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
   }
   .contact .circle-contact, .contact .social-nav {
     display: none;
+  }
+  .about .about-content {
+    text-align: center;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .about .about-content .text-about {
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .about-content .text-about p {
+    width: 80%;
+  }
+  .about .about-content .find-me {
+    margin-right: 95px;
   }
 }
 /*# sourceMappingURL=style.css.map */
