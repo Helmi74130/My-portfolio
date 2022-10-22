@@ -1131,5 +1131,129 @@ h4{
 }
 
 @media screen and (max-width: 880px) {
-  
+  .personal{
+    .personal-info{
+      h1{
+        font-size: 2.7em;
+      }
+      .text-bottom{
+        padding-right: 150px;
+      }
+    }
+  }
+  .personal-info, .section{
+    .section-left{
+      h2{
+        font-size: 2.8em;
+        width: 100%;
+        .ligne{
+          display: none;
+        }
+      }
+      p{
+        font-size: 2.2em;
+        width: 100%;
+      }
+    }
+   }
+}
+
+@media screen and (max-width: 720px) {
+  .personal{
+    .personal-info{
+      h1{
+        font-size: 1.7em;
+      }
+      .text-top{
+        font-size: 1.4em;
+      }
+      p.text-bottom{
+        padding-right: 150px;
+        font-size: 1.3em;
+      }
+    }
+  }
+  .personal-info, .section{
+    .section-left{
+      h2{
+        font-size: 2em;
+        width: 100%;
+        .ligne{
+          display: block;
+        }
+        .emoji-second{
+          height: 40px;
+        }
+        .emoji-third{
+          height: 40px;
+        }
+      }
+      p{
+        font-size: 1.6em;
+        width: 100%;
+      }
+    }
+  }
+  .project-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .project-left{
+      height: 60px;
+    }
+    .title-project{
+      font-size: 3em;
+    }
+    .button-tabs{
+      height: 60px;
+      width: 60px;
+    }
+    .project-right{
+      width: 100%;
+      margin-top: 30px;
+
+      .ipad{
+       padding: 0;
+      }
+    }
+  }
+  .competence{
+    .panel-left{
+      width: 100%;
+      .subcontent h6{
+        font-size: 2em;
+      }
+    }
+    .panel-right{
+      display:none ;
+    }
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+    
+    .contact-left{
+      width: 100%;
+      .content-contact{
+        display: none;
+      }
+    }
+    .contact-right{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      form{
+        display: flex;
+        align-items: center;
+        //height: 100%;
+        margin-top: 0;
+      }
+    }
+    .circle-contact, .social-nav{
+      display: none;
+    }
+  }
 }
