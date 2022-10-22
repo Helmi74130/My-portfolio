@@ -1030,7 +1030,106 @@ h4{
     }
   }
 }
+@media screen and (max-width: 1250px) {
 
+ .personal-info-right, .smartphone{
+  display: none;
+ }
+ .personal{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+ }
+ .personal-info, .section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .section-left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+      font-size: 3.5em;
+      width: 100%;
+    }
+    p{
+      width: 100%;
+    }
+  }
+ }
 
+ .project-panel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  .project-left{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .ligne{
+      display: none;
+    }
+    .controls-screen{
+      width: 30%;
+    }
+    p{
+      display: none;
+    }
+  }
+  .project-right{
+    width: 95%;
+    height: 80%; 
+  }
+ }
 
+ .competence{
+  .panel-left{
+    h5{
+      font-size: 2.5em;
+    }
+    .subcontent{
+      h6{
+        font-size: 1.6em;
+      }
+      p{
+        font-size: 1.2em;
+      }
+    } 
+  }
+  .panel-right{
+    display: flex;
+    .icon-panel{
+      width: 30%;
+    }
+    img{
+      height: 70px;
+    }
+    .mt{
+      margin: 0;
+    }
+  }
+ }
+ .about{
+  .about-content{
+    margin-top: 30px;
+    width: 80%;
+  }
+  .content-circle-left, .content-circle-right{
+    display: none;
+  }
+ }
+.circle-contact{
+  z-index: -1;
+}
+}
+
+@media screen and (max-width: 880px) {
+  
+}

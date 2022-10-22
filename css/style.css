@@ -1572,4 +1572,131 @@ h4 {
 .contact .contact-right input:focus, .contact .contact-right textarea:focus {
   outline: none;
 }
+
+@media screen and (max-width: 1250px) {
+  .personal-info-right, .smartphone {
+    display: none;
+  }
+  .personal {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .personal-info, .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .personal-info .section-left, .section .section-left {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .personal-info .section-left h2, .section .section-left h2 {
+    font-size: 3.5em;
+    width: 100%;
+  }
+  .personal-info .section-left p, .section .section-left p {
+    width: 100%;
+  }
+  .project-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+  }
+  .project-panel .project-left {
+    width: 100%;
+    height: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .project-panel .project-left .ligne {
+    display: none;
+  }
+  .project-panel .project-left .controls-screen {
+    width: 30%;
+  }
+  .project-panel .project-left p {
+    display: none;
+  }
+  .project-panel .project-right {
+    width: 95%;
+    height: 80%;
+  }
+  .competence .panel-left h5 {
+    font-size: 2.5em;
+  }
+  .competence .panel-left .subcontent h6 {
+    font-size: 1.6em;
+  }
+  .competence .panel-left .subcontent p {
+    font-size: 1.2em;
+  }
+  .competence .panel-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .competence .panel-right .icon-panel {
+    width: 30%;
+  }
+  .competence .panel-right img {
+    height: 70px;
+  }
+  .competence .panel-right .mt {
+    margin: 0;
+  }
+  .about .about-content {
+    margin-top: 30px;
+    width: 80%;
+  }
+  .about .content-circle-left, .about .content-circle-right {
+    display: none;
+  }
+  .circle-contact {
+    z-index: -1;
+  }
+}
 /*# sourceMappingURL=style.css.map */
