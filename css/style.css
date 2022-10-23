@@ -1093,16 +1093,66 @@ main .personal h1 .my-name {
   height: 70px;
 }
 
-.panel {
-  height: 100vh;
-  width: 100%;
+@media screen and (max-width: 2000px) {
+  .project-panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+  }
+  .project-panel .project-left {
+    width: 100%;
+    height: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .project-panel .project-left .ligne {
+    display: none;
+  }
+  .project-panel .project-left .controls-screen {
+    width: 30%;
+  }
+  .project-panel .project-left p {
+    display: none;
+  }
+  .project-panel .project-right {
+    width: 95%;
+    height: 80%;
+    margin-top: 20px;
+  }
+}
+
+.project-panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.panel .project-left {
+.project-panel .project-left {
   width: 30%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,20 +1160,15 @@ main .personal h1 .my-name {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-bottom: 300px;
   color: white;
 }
 
-.panel .project-left h4 {
+.project-panel .project-left h4 {
   margin-top: 20px;
 }
 
-.panel .project-left .controls-screen {
+.project-panel .project-left .controls-screen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1133,22 +1178,30 @@ main .personal h1 .my-name {
   width: 100%;
 }
 
-.panel .project-left p {
+.project-panel .project-left p {
   margin-bottom: 150px;
   font-size: 1.3em;
   color: #9797a1;
   text-align: center;
 }
 
-.panel .project-left p .design {
+.project-panel .project-left p .design {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   text-shadow: 3px 3px 10px #00ffa5, -2px 1px 30px #9403f4;
 }
 
-.panel .project-right {
+.project-panel .project-right {
   width: 70%;
   padding-bottom: 150px;
+}
+
+.panel {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .button-tabs {
@@ -1336,9 +1389,6 @@ h4 {
 .about h2 {
   font-size: 4em;
   color: #00ffa5;
-  /* background:  linear-gradient(67deg, #5c5c5e 12%, #00ffa5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 .about .text-about {
@@ -1577,12 +1627,6 @@ h4 {
   .personal-info-right, .smartphone {
     display: none;
   }
-  /* .personal{
-    //width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  } */
   .personal-info, .section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1613,49 +1657,6 @@ h4 {
   }
   .personal-info .section-left p, .section .section-left p {
     width: 100%;
-  }
-  .project-panel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 50px;
-  }
-  .project-panel .project-left {
-    width: 100%;
-    height: 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .project-panel .project-left .ligne {
-    display: none;
-  }
-  .project-panel .project-left .controls-screen {
-    width: 30%;
-  }
-  .project-panel .project-left p {
-    display: none;
-  }
-  .project-panel .project-right {
-    width: 95%;
-    height: 80%;
   }
   .competence .panel-left h5 {
     font-size: 2.5em;
@@ -1692,27 +1693,52 @@ h4 {
   }
 }
 
-@media screen and (max-width: 880px) {
-  .personal .personal-info h1 {
-    font-size: 2.7em;
-  }
-  .personal .personal-info .text-bottom {
-    padding-right: 150px;
-  }
-  .personal-info .section-left h2, .section .section-left h2 {
-    font-size: 2.8em;
-    width: 100%;
-  }
-  .personal-info .section-left h2 .ligne, .section .section-left h2 .ligne {
+@media screen and (min-width: 1001px) {
+  .project-panel-responsive {
     display: none;
   }
-  .personal-info .section-left p, .section .section-left p {
-    font-size: 2.2em;
-    width: 100%;
+  .project-panel {
+    display: block;
   }
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 1000px) {
+  .project-panel {
+    display: none;
+  }
+  .project-panel-responsive {
+    display: block;
+    padding: 30px;
+    max-width: 100%;
+  }
+  .project-panel-responsive .container-panel-responsive {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .project-panel-responsive .container-panel-responsive img {
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 100%;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .project-panel-responsive .container-panel-responsive img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 880px) {
   .clickScrollbar {
     display: none;
   }
@@ -1730,7 +1756,7 @@ h4 {
     font-size: 1.8em;
   }
   .personal-info .section-left, .section .section-left {
-    width: 90%;
+    width: 80%;
   }
   .personal-info .section-left h2, .section .section-left h2 {
     font-size: 4em;
