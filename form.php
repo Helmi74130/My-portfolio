@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Formulaire envoyé</h1>
-  <?php var_dump($_POST) ?>
+  
 
   <?php
   $sendmail = $_POST['email'];
@@ -16,12 +16,14 @@
   $firstnamename = $_POST['firstname'];
   $phone = $_POST['phone'];
   $message = $_POST['message'];
-  $headers = "tounsi74130@gmail.com" . "\r\n" .
-"CC: somebodyelse@example.com";
+  $headers = 'tounsi74130@gmail.com' . "\r\n" .
+    'Reply-To: tounsi74130@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-    $retour = mail($sendmail, 'Envoi depuis la page Contact', $message, 'From: tounsi74130@gmail.com');
+    $retour = mail($sendmail, 'Envoi depuis la page Contact', $message, $headers);
     if ($retour)
         echo '<p>Votre message a bien été envoyé.</p>';
     ?>
+    <?php var_dump($headers) ?>
 </body>
 </html>
