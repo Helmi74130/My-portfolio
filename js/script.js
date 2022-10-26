@@ -205,7 +205,7 @@ function parallax(e){
   })
 }
 
-function ValidateEmail(input) {
+/* function ValidateEmail(input) {
   var validRegex = /^\S+@\S+\.\S+$/;
 
   if (input.value.match(validRegex)) {
@@ -213,14 +213,14 @@ function ValidateEmail(input) {
    console.log("Valid email address!");
     return true;
   } else {
-    console.log("INValid email address!");
+    console.log("InValid email address!");
     return false;
   }
-}
+} */
 
-submit.addEventListener('click', (e)=>{
+/* submit.addEventListener('click', (e)=>{
   e.stopPropagation()
   e.preventDefault()
   ValidateEmail(mail)
 })
-
+ */

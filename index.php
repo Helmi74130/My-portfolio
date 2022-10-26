@@ -395,17 +395,17 @@
         <div class="circle-contact"></div>
       </div>
       <div class="contact-right">
-        <form action="">
+        <form method="POST" action="form.php">
           <div class="form-content">
-            <input id="name" type="text" required placeholder="Nom*">
-            <input id="firstname" type="text" required placeholder="Prénom*">
+            <input name="name" id="name" type="text" required placeholder="Nom*">
+            <input name="firstname" id="firstname" type="text" required placeholder="Prénom*">
           </div>
           <div class="form-content">
-            <input id="mail" type="mail" required placeholder="E-mail*">
-            <input id="phone" type="number" required placeholder="Téléphone">
+            <input name="email" id="mail" type="mail" required placeholder="E-mail*">
+            <input name="phone" id="phone" type="number" required placeholder="Téléphone">
           </div>
             <textarea required name="message" id="message" cols="30" rows="12" placeholder="Votre Message"></textarea>
-            <button class="button-tabs" id="submit" type="submit">Envoyer</button>
+            <button class="button-tabs" id="submit" >Envoyer</button>
         </form>
       </div>
     </section>
