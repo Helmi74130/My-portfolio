@@ -112,7 +112,7 @@ window.onload = function () {
 
 /* this two function change video source and url */
 const urlSource =['video/illustre.mp4', 'video/richard.mp4', 'video/earth.mp4', 'video/orange.mp4', 'video/meteo.mp4', 'video/dice.mp4' ]
-const url =['https://illustre-restaurant.herokuapp.com/', 'https://richards-immobilier.herokuapp.com/', 'https://earth-and-sea.herokuapp.com/', 'https://whispering-falls-36328.herokuapp.com/', 'https://meteo-france-apps.herokuapp.com/', 'https://dicerollthegame.herokuapp.com/' ]
+const url =['https://illustre-restaurant.herokuapp.com/', 'https://richards-immo.herokuapp.com/', 'https://earth-and-sea.herokuapp.com/', 'https://whispering-falls-36328.herokuapp.com/', 'https://meteo-france-apps.herokuapp.com/', 'https://dicerollthegame.herokuapp.com/' ]
 
 let index = 0
 next.addEventListener('click', ()=>{
