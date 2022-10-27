@@ -19,7 +19,7 @@
   $headers = "Content-Type: text/plain; charset=utf-8\r\n";
   $headers .= "From: tounsi74130@gmail.com\r\n";
 
-    $retour = mail($sendmail, 'Envoi depuis la page Contact', $message, $headers);
+    $retour = mail('tounsi74130@gmail.com', 'Envoi depuis la page Contact', $message, "");
     if ($retour)
         echo '<p>Votre message a bien été envoyé.</p>';
     ?>
