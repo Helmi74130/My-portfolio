@@ -22,6 +22,11 @@ const homePhone = document.querySelector('#homePhone')
 const smartphoneDiv = document.querySelector('#smartphoneDiv')
 const submit = document.querySelector('#submit')
 const mail = document.querySelector('#mail')
+const inputFirstname = document.querySelector('#firstname')
+const inputName = document.querySelector('#name')
+const textFirstName = document.querySelector('#textFirstname')
+const textEmail = document.querySelector('#textEmail')
+const textName = document.querySelector('#textName')
 
 
 /* this function allows you to navigate by clicking on the progressbar */
@@ -205,22 +210,66 @@ function parallax(e){
   })
 }
 
-/* function ValidateEmail(input) {
-  var validRegex = /^\S+@\S+\.\S+$/;
+let emailValidation = true
+function validateEmail(input) {
+  var validRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
 
-  if (input.value.match(validRegex)) {
+  if (!input.value.match(validRegex)) {
+    textEmail.textContent = 'Votre adresse e-mail n\'est pas valide'
+    emailValidation = false
+  }else{
+    textEmail.textContent = ''
+    emailValidation = true
+  } 
+}
 
-   console.log("Valid email address!");
-    return true;
-  } else {
-    console.log("InValid email address!");
-    return false;
+let nameValidation = true
+function validateName(input) {
+  var validRegex = /^[A-Za-z .'-]+$/;
+  if (!input.value.match(validRegex)) {
+    textName.textContent = 'Votre Prénom ne peut pas contenir un chiffre ou des caractéres spéciaux'
+    nameValidation = false
+  }else{
+    textName.textContent = ''
+    nameValidation = true
+  } 
+}
+
+let firstnameValidation = true
+function validateFirstname(input) {
+  var validRegex = /^[A-Za-z .'-]+$/;
+  if (!input.value.match(validRegex)) {
+    textFirstName.textContent = 'Votre Nom ne peut pas contenir un chiffre ou des caractéres spéciaux'
+    firstnameValidation = false
+  }else{
+    textFirstName.textContent = ''
+    firstnameValidation = true
+  } 
+}
+
+function prevent(e){
+  if (!emailValidation  || !nameValidation || !firstnameValidation) {
+    e.preventDefault()
   }
-} */
+}
 
-/* submit.addEventListener('click', (e)=>{
-  e.stopPropagation()
-  e.preventDefault()
-  ValidateEmail(mail)
+inputName.addEventListener('focusout', (e)=>{
+  validateName(inputName)
+} )
+
+inputFirstname.addEventListener('focusout', (e)=>{
+  validateFirstname(inputFirstname)
+} )
+
+mail.addEventListener('focusout', (e)=>{
+  validateEmail(mail)
+} )
+
+submit.addEventListener('click', (e)=>{
+  validateEmail(mail)
+  validateName(inputName)
+  validateFirstname(inputFirstname)
+  prevent(e)
 })
- */
+
+

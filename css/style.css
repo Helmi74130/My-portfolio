@@ -1595,8 +1595,27 @@ h4 {
       justify-content: space-around;
 }
 
-.contact .contact-right form .form-content input {
+.contact .contact-right form .form-content div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 30%;
+}
+
+.contact .contact-right form .form-content div p {
+  text-align: center;
+  color: #bb3636;
+  margin-top: 10px;
+}
+
+.contact .contact-right form .form-content input {
+  width: 100%;
 }
 
 .contact .contact-right form textarea {
@@ -1930,7 +1949,7 @@ h4 {
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 580px) {
   .section .section-left h2 {
     font-size: 3em;
   }
