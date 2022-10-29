@@ -13,18 +13,22 @@
   <title>Helmi El Maïel Développeur Full-Stack</title>
 </head>
 <body>
+
+  <?php
+    require_once "php/load_language.php";
+   ?>
   <div class="scrollbar"></div>
   <div class="clickScrollbar"></div>
   <!-- HEADER MODAL -->
   <div id="modalHeader" class="modal-header-container none">
     <div class="modal-header-content">
       <div>
-        <p>Découvrir...</p>
+        <p><?= DISCOVER ?></p>
         <nav>
-          <a class="effect-shine active" href="#project">Projets</a>
+          <a class="effect-shine active" href="#project"><?= PROJECT?></a>
           <a class="effect-shine" href="#contact">Contact</a>
-          <a class="effect-shine" href="#about">A propos</a>
-          <a class="effect-shine" href="#competence">Compétences</a>
+          <a class="effect-shine" href="#about"><?= ABOUT ?></a>
+          <a class="effect-shine" href="#competence"><?= COMPETENCE ?></a>
         </nav>
       </div>
     </div>
@@ -36,6 +40,13 @@
         <a class="link-logo-header" href="#top">
           <img height="52px" width="52px" src="img/helmi.png" alt="logo du site">
         </a>
+        <div class="language">
+          <img id="flag" height="32px" width="32px" src=<?= $_COOKIE['language'] === "fr" ? "icon/france.png" : "icon/royaume-uni.png";?>>
+          <div id="textLanguage" class="text-language display">
+            <a href="index.php?language=fr"><?= FRENCH ?></a>
+            <a href="index.php?language=en"><?= ENGLISH ?></a>
+          </div>
+        </div>
       </div>
       <div id="buttonMenu" class="menu-icon">
         <input class="menu-icon__cheeckbox" type="checkbox" />
@@ -48,7 +59,7 @@
         <a target="_blank" href="https://github.com/Helmi74130">
           <img height="52px" width="52px" src="img/github1.png" alt="logo github">
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/helmi-el-maiel-0b1576254/">
+        <a target="_blank" href="https://www.linkedin.com/in/helmi-el-maiel-developpeur-front-end-back-end-full-stack-css-html-javascript-php-react-symfony/">
           <img height="52px" width="52px" src="img/linkedin.png" alt="logo linkedin">
         </a>
       </div>
@@ -58,11 +69,11 @@
     <!-- PRESENTATION -->
     <div class="personal">
       <div class="personal-info">
-        <h1>Moi c'est Helmi<span id="textWritter"></span></h1>
-        <p class="text-top">Et, avant tout passionné par ce que je fait!</p>
-        <p class="text-bottom">Un intérêt pour le design et les interfaces innovantes et une grande part d'imagination</p>
-        <button class="glow-on-hover"><a href="#contact">Contactez-moi !</a></button>
-        <p class="project">Plusieurs projets terminés est en cours mais avant toute chose commençons</p>
+        <h1><?= NAME_TEXT ?><span id="textWritter"></span></h1>
+        <p class="text-top"><?= PASSIONNED_TEXT ?></p>
+        <p class="text-bottom"><?= INTERET_TEXT?></p>
+        <button class="glow-on-hover"><a href="#contact"><?= CONTACT_TEXT ?></a></button>
+        <p class="project"><?= PROJECT_TEXT ?></p>
       </div>
       <!-- DIV SMARTPHONE -->
       <div id="smartphoneDiv" class="personal-info-right" >
@@ -102,7 +113,7 @@
                   <img src="/img/dev.jpg" height="30" alt="avatar d'un developpeur" srcset="">
                   <div>
                     <p>Helmi</p>
-                    <p>en ligne</p>
+                    <p><?= ONLINE_TEXT ?></p>
                   </div>
                 </div>
                 <div class="right-content-subphone-header">
@@ -122,7 +133,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-telephone-x-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm9.261 1.135a.5.5 0 0 1 .708 0L13 2.793l1.146-1.147a.5.5 0 0 1 .708.708L13.707 3.5l1.147 1.146a.5.5 0 0 1-.708.708L13 4.207l-1.146 1.147a.5.5 0 0 1-.708-.708L12.293 3.5l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
                   </svg>
-                  <p>Appel vocal manqué à <span class="time"></span></p>
+                  <p><?= CALL_TEXT ?><span class="time"></span></p>
                 </div>
               </div>
               <div class="phone-content right">
@@ -180,7 +191,7 @@
               <div class="header-call">
                 <img src="/img/dev.jpg" height="60px" alt="" srcset="">
                 <p>Helmi</p>
-                <p>Appel vocal WhatsApp</p>
+                <p><?= CALL_APP_TEXT ?></p>
               </div>
               <div class="main-call">
                 <div class="icon-call">
@@ -197,7 +208,7 @@
                 </div>
               </div>
               <div class="footer-call">
-                <p>Balayez vers le haut <br> pour accepter</p>
+                <p><?= RESPOND_TEXT ?></p>
               </div>
             </div>
           </div>
@@ -208,8 +219,8 @@
   <!-- SECTION LEFT UP-->
   <div class="section">
     <div class="section-left">
-      <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><span class="design">Concevons</span> une expérience unique, <br class="ligne"> élégante et à la fois <br class="ligne"> accrocheuse ! <img src="https://uploads-ssl.webflow.com/5f986747c748aa746b35ee7d/5f9cd8c2788d35c33317e409_geex-emoji%20-%2003.png" loading="lazy" alt="" class="emoji-second"></h2>
-      <p data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="bottom-bottom">Une stratégie SEO <br class="ligne"> est un plan d'action permettant d'optimiser <br class="ligne"> le référencement naturel.</p>
+      <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><span class="design"><?= CONCEV_TEXT ?></span> <?= UNIQUE_TEXT ?> <br class="ligne"> <?= ELEGANTE_TEXT ?> <br class="ligne"> <?= ACCROCHE_TEXT ?> <img src="https://uploads-ssl.webflow.com/5f986747c748aa746b35ee7d/5f9cd8c2788d35c33317e409_geex-emoji%20-%2003.png" loading="lazy" alt="" class="emoji-second"></h2>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="bottom-bottom"><?= STRATEGY_TEXT ?> <br class="ligne"> <?= ACTION_TEXT ?> <br class="ligne"> <?= REFER_TEXT ?></p>
     </div>
     <div class="section-right">
     </div>
@@ -217,8 +228,8 @@
   <!-- SECTION LEFT DOWN-->
   <div class="section">
     <div class="section-left">
-      <h2 data-aos="fade-up" class="color" data-aos-anchor-placement="bottom-bottom"><span class="design">Imaginons</span> un ensemble de brique, <br class="ligne"> qui s'emboitent les uns aux autres <br class="ligne"> pour former <span class="design">votre</span> site ! <img src="img/screen.png" loading="lazy" alt="" class="emoji-third"></h2>
-      <p data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="bottom-bottom">Une esthétique clair à la fois ergonomique <br> et responsive qui s'adaptera sur tous vos <br> appareils...</p>
+      <h2 data-aos="fade-up" class="color" data-aos-anchor-placement="bottom-bottom"><span class="design"><?= IMAGINE_TEXT ?></span> <?= ENSEMBLE_TEXT ?> <br class="ligne"> <?= EMBOITE_TEXT ?> <br class="ligne"> <?= FORME_TEXT ?><span class="design"><?= YOU_TEXT ?></span> <?= WEBSITE_TEXT ?> <img src="img/screen.png" loading="lazy" alt="" class="emoji-third"></h2>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="bottom-bottom"><?= ESTHETIQUE_TEXT ?></p>
     </div>
     <div class="section-right">
     </div>
@@ -226,7 +237,7 @@
   <!-- PANEL PROJECT FULL SCREEN-->
     <section id="project" class="panel project-panel in-top">
       <div class="project-left " data-aos="fade-up" data-aos-anchor-placement="top-center">
-        <h4 class="title-project">Découvrez <br class="ligne"> mes projets</h4>
+        <h4 class="title-project"><?= DISCOVER_TEXT ?><br class="ligne"> <?= MY_PROJECT_TEXT ?></h4>
         <div class="controls-screen">
           <button class="button-tabs" id="previous"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
@@ -247,7 +258,7 @@
     </section>
   <!-- PANEL PROJECT-->
     <section class="project-panel-responsive">
-      <h4 class="project">Découvrez mes projets</h4>
+      <h4 class="project"><?= DISCOVER_TEXT.''.MY_PROJECT_TEXT ?></h4>
       <div class="container-panel-responsive">
         <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank" href="https://illustre-restaurant.herokuapp.com/"><img src="/img/illustreimg.png"/></a>
         <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://richards-immobilier.herokuapp.com/"><img src="/img/richardsimg.png"/></a>
@@ -260,23 +271,23 @@
     <!-- PANEL COMPETENCE -->
     <section id="competence" class="panel competence a">
       <div class="panel-left">
-        <h5>Mes competences</h5>
+        <h5><?= COMPETENCE_TEXT ?></h5>
         <div class="subcontent">
           <div>
-            <h6>Gestion des projets web</h6>
-            <p>Site vitrine, évènementiel, e-commerce, refonte, single page application</p>
+            <h6><?= PROJECT_TITLE ?></h6>
+            <p><?= PROJECT_TITLE_TEXT ?></p>
           </div>
           <div>
-            <h6>Conception graphique et design</h6>
-            <p>Maquettage, user stories, wireframes, interfaces web, accessibilité visuelle</p>
+            <h6><?= CONCEPT_TITLE ?></h6>
+            <p><?= CONCEPT_TITLE_TEXT ?>/p>
           </div>
           <div>
-            <h6>Développement d'applications multi-plateformes</h6>
-            <p>Site Compatible tous supports, tablette et application mobile</p>
+            <h6><?= DEV_TITLE ?></h6>
+            <p><?= DEV_TITLE_TEXT ?></p>
           </div>
           <div>
-            <h6>Deploiement d'application web</h6>
-            <p>Nom de domaine et hébergement</p>
+            <h6><?= DEP_TITLE ?></h6>
+            <p><?= DEV_TITLE_TEXT ?></p>
           </div>
         </div>
       </div>
@@ -331,7 +342,7 @@
     <!-- PANEL ABOUT -->
     <section id="about" class="panel about">
       <div class="about-content">
-        <h2>Qui suis-je?</h2>
+        <h2><?= ABOUT_TITLE ?></h2>
         <div class="text-about">
           <p>Avant d'etre développeur je suis avant tout <span class="design">Helmi EL Maiel</span>, j'ai étudié chez Studi en tant que Graduate Développeur Full-Stack</p><br>
           <p>
@@ -342,7 +353,7 @@
           </p>
         </div>
         <div class="find-me">
-          <p>Pour mieux me connaitre - </p>
+          <p><?= KNOW_TEXT ?></p>
           <a href="">GitHub</a>
           <a href="">Linkedin</a>
         </div>
@@ -365,7 +376,7 @@
       <div class="contact-left">
         <div class="title-contact">
           <h3>Contact</h3>
-          <p>Je vous répondrais au plus vite</p>
+          <p><?= RESPOND_FAST_TEXT ?></p>
         </div>
         <div class="content-contact">
           <div class="join">
@@ -386,7 +397,7 @@
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
           </a>
-          <a href="">
+          <a target="_blank" href="https://www.linkedin.com/in/helmi-el-maiel-developpeur-front-end-back-end-full-stack-css-html-javascript-php-react-symfony/">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
               <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
             </svg>
@@ -395,14 +406,14 @@
         <div class="circle-contact"></div>
       </div>
       <div class="contact-right">
-        <form method="POST" action="form.php">
+        <form method="POST" action="php/form.php">
           <div class="form-content">
               <div>
-                <input name="name" id="name" type="text" required placeholder="Nom*">
+                <input name="name" id="name" type="text" required placeholder="<?= NAME ?>*">
                 <p id="textName"></p>
               </div>
               <div>
-                <input name="firstname" id="firstname" type="text" required placeholder="Prénom*">
+                <input name="firstname" id="firstname" type="text" required placeholder="<?= FIRSTNAME_TEXT ?>*">
                 <p id="textFirstname"></p>
               </div>
           </div>
@@ -412,25 +423,16 @@
               <p id="textEmail"></p>
             </div>
             <div>
-              <input name="phone" id="phone" type="number" placeholder="Téléphone">
+              <input name="phone" id="phone" type="number" placeholder="<?= PHONE_TEXT ?>">
               <p id="textPhone"></p>
             </div>
           </div>
-            <textarea required name="message" id="message" cols="30" rows="12" placeholder="Votre Message"></textarea>
-            <button class="button-tabs" id="submit">Envoyer</button>
+            <textarea required name="message" id="message" cols="30" rows="12" placeholder="<?= MESSAGE_TEXT ?>"></textarea>
+            <button class="button-tabs" id="submit"><?= SEND_BUTTON ?></button>
         </form>
       </div>
     </section>
 
-    
-          
-            
-    
-
-          
-    
-    
-  
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>

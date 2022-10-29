@@ -27,6 +27,13 @@ const inputName = document.querySelector('#name')
 const textFirstName = document.querySelector('#textFirstname')
 const textEmail = document.querySelector('#textEmail')
 const textName = document.querySelector('#textName')
+const flag = document.querySelector('#flag')
+const textLanguage = document.querySelector('#textLanguage')
+
+
+flag.addEventListener('click', ()=>{
+  textLanguage.classList.toggle("display")
+})
 
 
 /* this function allows you to navigate by clicking on the progressbar */
