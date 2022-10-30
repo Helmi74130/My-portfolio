@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/form.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <title>Helmi El Maïel Développeur contact</title>
+  <title>Contact</title>
 </head>
     <?php 
         require_once "checkForm.php";
@@ -19,23 +19,17 @@
     ?>
 <body>
   <h1><?php echo $success ?></h1>
-
-    <div>
+  <div>
     <p><?php echo $nameErr ?></p>
     <p><?php echo $firstnameErr ?></p>
     <p><?php echo $mailErr ?></p>
     <p><?php echo $messageErr ?></p>
-    </div>
-  
+  </div>
   <div class="back">
     <a href="../index.php"><button class="button-tabs">Retourner sur le site</button></a>
   </div>
-
   <div class="img-content">
     <?php if($send === false){echo $img;}?>
   </div>
-
-  
-  
 </body>
 </html>

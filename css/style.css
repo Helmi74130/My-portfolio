@@ -100,7 +100,7 @@ html {
 .menu-icon .menu-icon__cheeckbox:checked + div span:first-of-type {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: #9403f4;
+  background-color: #00ffa5;
   top: 5px;
 }
 
@@ -108,7 +108,7 @@ html {
 .menu-icon .menu-icon__cheeckbox:checked + div span:last-of-type {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  background-color: #9403f4;
+  background-color: #00ffa5;
   bottom: 5px;
 }
 
@@ -226,6 +226,10 @@ html {
 
 .language {
   margin-left: 20px;
+}
+
+.language img:hover {
+  cursor: pointer;
 }
 
 .language .display {

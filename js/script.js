@@ -15,56 +15,58 @@ const sendMessageButton = document.querySelector('#sendMessageButton')
 const phoneMessage = document.querySelector('#phoneMessage')
 const phoneMessageOfMe = document.querySelector('#phoneMessageOfMe')
 const timeMessage = document.querySelectorAll('.time')
-const helloText = document.querySelector('#helloText')
-const longText = document.querySelector('#longText')
 const acceptBtn = document.querySelector('#acceptBtn')
 const homePhone = document.querySelector('#homePhone')
 const smartphoneDiv = document.querySelector('#smartphoneDiv')
 const submit = document.querySelector('#submit')
-const mail = document.querySelector('#mail')
-const inputFirstname = document.querySelector('#firstname')
-const inputName = document.querySelector('#name')
-const textFirstName = document.querySelector('#textFirstname')
-const textEmail = document.querySelector('#textEmail')
-const textName = document.querySelector('#textName')
 const flag = document.querySelector('#flag')
 const textLanguage = document.querySelector('#textLanguage')
 
-
-flag.addEventListener('click', ()=>{
-  textLanguage.classList.toggle("display")
-})
-
-
-/* this function allows you to navigate by clicking on the progressbar */
-let totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-progressBarClick.addEventListener('click', (e)=>{
-  let newPageScroll = e.clientY / progressBarClick.offsetHeight * totalHeight
-  window.scrollTo({
-    top: newPageScroll,
-    behavior: "smooth"
+  /**
+   * Toggle class display onclick to the flag
+   */
+  flag.addEventListener('click', ()=>{
+    textLanguage.classList.toggle("display")
   })
-})
 
-/* this function allows you to see the progress of the prossbar */
-window.addEventListener('scroll', ()=>{
-  let progress = (document.documentElement.scrollTop / totalHeight) * 100
-  progressBar.style.height = `${progress}%`
-  progressBar.style.opacity = `${progress}%`
-})
+  /**
+   * Allows you to navigate by clicking on the progressbar
+   */
+  let totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+  progressBarClick.addEventListener('click', (e)=>{
+    let newPageScroll = e.clientY / progressBarClick.offsetHeight * totalHeight
+    window.scrollTo({
+      top: newPageScroll,
+      behavior: "smooth"
+    })
+  })
 
-/* this function open the modal navbar header */
-buttonMenu.addEventListener('click', ()=>{
-  if (modalHeader.classList.contains('open')) {
-    modalHeader.classList.add("close")
-    modalHeader.classList.remove("open")
-  }else{
-    modalHeader.classList.add("open")
-    modalHeader.classList.remove("close")
-    modalHeader.classList.remove("none")
-  }
-})
-/* this function write automatically */
+  /**
+   * Allows you to see the progress of the prossbar
+   */
+  window.addEventListener('scroll', ()=>{
+    let progress = (document.documentElement.scrollTop / totalHeight) * 100
+    progressBar.style.height = `${progress}%`
+    progressBar.style.opacity = `${progress}%`
+  })
+
+  /**
+   * Open the modal navbar header
+   */
+  buttonMenu.addEventListener('click', ()=>{
+    if (modalHeader.classList.contains('open')) {
+      modalHeader.classList.add("close")
+      modalHeader.classList.remove("open")
+    }else{
+      modalHeader.classList.add("open")
+      modalHeader.classList.remove("close")
+      modalHeader.classList.remove("none")
+    }
+  })
+
+  /**
+   * write automatically
+   */
   new Typewriter(textWritter,{
   })
   .typeString(', Dev')
@@ -83,7 +85,9 @@ buttonMenu.addEventListener('click', ()=>{
   .typeString('<span style="color: #00ffa5;"> FULL-STACK !</span> ')
   .start();
 
-/* this function remove class and add class in the phone when scroll */
+  /**
+  * remove class and add class in the phone when scroll
+  */
   addEventListener('scroll', () => {
     if (window.scrollY > 1150) {
       smartphoneDiv.classList.add("close")
@@ -95,188 +99,97 @@ buttonMenu.addEventListener('click', ()=>{
     }
   }); 
 
-phoneButton.addEventListener('click', ()=>{
-  acceptBtn.classList.add('to-up')
-  setTimeout(()=>{
-    smartphone.classList.remove("shake")
-    screen.classList.remove("none")
-    homePhone.classList.add("none")
-  }, 500)
-})
+  phoneButton.addEventListener('click', ()=>{
+    acceptBtn.classList.add('to-up')
+    setTimeout(()=>{
+      smartphone.classList.remove("shake")
+      screen.classList.remove("none")
+      homePhone.classList.add("none")
+    }, 500)
+  })
 
 /* this function allows to make a panel of slides */
-window.onload = function () {
-  let controller = new ScrollMagic.Controller({
-    globalSceneOptions:{
-      triggerHook:'onLeave'
-    }
-  })
-  let slides = document.querySelectorAll("section.panel")
-  
-  for (let i = 0; i < slides.length; i++) {
-    new ScrollMagic.Scene({
-      triggerElement: slides[i]
+  window.onload = function () {
+    let controller = new ScrollMagic.Controller({
+      globalSceneOptions:{
+        triggerHook:'onLeave'
+      }
     })
-    .setPin(slides[i])
-    .addTo(controller)
-  }
-}
-
-/* this two function change video source and url */
-const urlSource =['video/illustre.mp4', 'video/richard.mp4', 'video/earth.mp4', 'video/orange.mp4', 'video/meteo.mp4', 'video/dice.mp4' ]
-const url =['https://illustre-restaurant.herokuapp.com/', 'https://richards-immo.herokuapp.com/', 'https://earth-and-sea.herokuapp.com/', 'https://whispering-falls-36328.herokuapp.com/', 'https://meteo-france-apps.herokuapp.com/', 'https://dicerollthegame.herokuapp.com/' ]
-
-let index = 0
-next.addEventListener('click', ()=>{
-  index++
-    if ( urlSource.length === index) {
-      videoTablette.src=urlSource[0]
-      linkForWebSite.href = url[0]
-      index=0
-    }else{
-      videoTablette.src=urlSource[index]
-      linkForWebSite.href = url[index]
+    let slides = document.querySelectorAll("section.panel")
+    
+    for (let i = 0; i < slides.length; i++) {
+      new ScrollMagic.Scene({
+        triggerElement: slides[i]
+      })
+      .setPin(slides[i])
+      .addTo(controller)
     }
-})
-
-previous.addEventListener('click', ()=>{
-  index--
-    if ( index < 0) {
-      videoTablette.src=urlSource[urlSource.length-1]
-      index=urlSource.length-1
-      linkForWebSite.href = url[urlSource.length-1]
-    }else{
-      videoTablette.src=urlSource[index]
-      linkForWebSite.href = url[index]
-    }
-})
-
-let dateNow = new Date()
-let hour = dateNow.getHours()
-let minutes = dateNow.getMinutes()
-
-/* this loop  writes the time for each message sent*/
-for (let i = 0; i < timeMessage.length; i++) {
-  timeMessage[i].textContent = hour+':'+minutes
-}
-
-let welcomeText = ['Hey!!', 'Salut!', 'Bienvenue!', 'Bonjour!', '&#128075;', '&#x1F91A;']
-let phoneText = ['Bonne visite sur mon site!', 'Enchanté moi c\'est Helmi &#x1F44D;', 'Avez vous pensé à me contacter? &#x1F4BB;', 'Oubliez pas de me dire si vous avez apprécié la visite', 'Si vous voulez en savoir plus n\'hésitez pas à me contacter &#9997;']
-
-helloText.innerHTML = welcomeText[Math.floor(Math.random() * welcomeText.length)];
-longText.innerHTML = phoneText[Math.floor(Math.random() * phoneText.length)];
-
-sendMessageButton.addEventListener('click', ()=>{
-  let message = phoneInput.value
-
-  if (message.length > 400) {
-    phoneMessageOfMe.innerHTML +=`
-      <div class="phone-text first-right-message right-message">
-        <p>Attention ton message est trop long !</p>
-        <div class="phone-seen">
-          <p class="time"></p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
-            <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
-          </svg>
-        </div>
-      </div>
-      `
-  }else {
-    phoneMessage.innerHTML +=`
-      <div class="phone-text left-message first-left-message">
-        <p>${message}</p>
-        <div class="phone-seen">
-          <p>${hour}:${minutes}</p>
-        </div>
-      </div>
-      `
   }
-  phoneInput.value =""
-})
 
-acceptBtn.addEventListener('click', ()=>{
-  acceptBtn.classList.add('to-up')
+  let dateNow = new Date()
+  let hour = dateNow.getHours()
+  let minutes = dateNow.getMinutes()
 
-  setTimeout(()=>{
-    smartphone.classList.remove("shake")
-    screen.classList.remove("none")
-    homePhone.classList.add("none")
-  }, 500)
-})
+  /* this loop  writes the time for each message sent*/
+  for (let i = 0; i < timeMessage.length; i++) {
+    timeMessage[i].textContent = hour+':'+minutes
+  }
 
+  sendMessageButton.addEventListener('click', ()=>{
+    let message = phoneInput.value
 
-document.addEventListener('mousemove', parallax)
-function parallax(e){
-  this.querySelectorAll('.layer').forEach(Layer =>{
-    const speed = Layer.getAttribute('data-speed')
-
-    const x = (window.innerWidth - e.pageX*speed)/100
-    const y = (window.innerHeight - e.pageY*speed)/100
-
-    Layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    if (message.length > 400) {
+      phoneMessageOfMe.innerHTML +=`
+        <div class="phone-text first-right-message right-message">
+          <p>Attention ton message est trop long !</p>
+          <div class="phone-seen">
+            <p class="time"></p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+              <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+            </svg>
+          </div>
+        </div>
+        `
+    }else {
+      phoneMessage.innerHTML +=`
+        <div class="phone-text left-message first-left-message">
+          <p>${message}</p>
+          <div class="phone-seen">
+            <p>${hour}:${minutes}</p>
+          </div>
+        </div>
+        `
+    }
+    phoneInput.value =""
   })
-}
 
-let emailValidation = true
-function validateEmail(input) {
-  var validRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+/**
+ * Remove class shake and add animation
+ */
+  acceptBtn.addEventListener('click', ()=>{
+    acceptBtn.classList.add('to-up')
 
-  if (!input.value.match(validRegex)) {
-    textEmail.textContent = 'Votre adresse e-mail n\'est pas valide'
-    emailValidation = false
-  }else{
-    textEmail.textContent = ''
-    emailValidation = true
-  } 
-}
+    setTimeout(()=>{
+      smartphone.classList.remove("shake")
+      screen.classList.remove("none")
+      homePhone.classList.add("none")
+    }, 500)
+  })
 
-let nameValidation = true
-function validateName(input) {
-  var validRegex = /^[A-Za-z .'-]+$/;
-  if (!input.value.match(validRegex)) {
-    textName.textContent = 'Votre Prénom ne peut pas contenir un chiffre ou des caractéres spéciaux'
-    nameValidation = false
-  }else{
-    textName.textContent = ''
-    nameValidation = true
-  } 
-}
+/**
+ * Move the background with mouse movements
+ */
+  document.addEventListener('mousemove', parallax)
+  function parallax(e){
+    this.querySelectorAll('.layer').forEach(Layer =>{
+      const speed = Layer.getAttribute('data-speed')
 
-let firstnameValidation = true
-function validateFirstname(input) {
-  var validRegex = /^[A-Za-z .'-]+$/;
-  if (!input.value.match(validRegex)) {
-    textFirstName.textContent = 'Votre Nom ne peut pas contenir un chiffre ou des caractéres spéciaux'
-    firstnameValidation = false
-  }else{
-    textFirstName.textContent = ''
-    firstnameValidation = true
-  } 
-}
+      const x = (window.innerWidth - e.pageX*speed)/100
+      const y = (window.innerHeight - e.pageY*speed)/100
 
-function prevent(e){
-  if (!emailValidation  || !nameValidation || !firstnameValidation) {
-    e.preventDefault()
+      Layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
   }
-}
 
-inputName.addEventListener('focusout', (e)=>{
-  validateName(inputName)
-} )
-
-inputFirstname.addEventListener('focusout', (e)=>{
-  validateFirstname(inputFirstname)
-} )
-
-mail.addEventListener('focusout', (e)=>{
-  validateEmail(mail)
-} )
-
-submit.addEventListener('click', (e)=>{
-  validateEmail(mail)
-  validateName(inputName)
-  validateFirstname(inputFirstname)
-  prevent(e)
-})
 
 

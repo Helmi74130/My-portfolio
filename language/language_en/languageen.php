@@ -96,3 +96,7 @@ define("DISCOVER", "Discover...");
 define("FRENCH", "French");
 
 define("ENGLISH", "English");
+
+define("PRINCIPAL_TEXT", "My main focus is on you");
+
+define("SERVE_TEXT", "to serve");

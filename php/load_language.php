@@ -1,8 +1,9 @@
 <?php 
 
+
 if ( !empty($_GET['language']) ) {
   $_COOKIE['language'] = $_GET['language'] === 'en' ? 'en' : 'fr';
-} else {
+} else if ( empty($_COOKIE['language']) ) {
   $_COOKIE['language'] = 'fr';
 }
 setcookie('language', $_COOKIE['language']);

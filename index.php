@@ -13,7 +13,6 @@
   <title>Helmi El Maïel Développeur Full-Stack</title>
 </head>
 <body>
-
   <?php
     require_once "php/load_language.php";
    ?>
@@ -349,13 +348,13 @@
             J'ai appris énormément durant mes études, et surtout avec la mise en pratique! J'aime coder et concevoir des interfaces innovantes.
           </p><br>
           <p>
-            Mon principal objectif est de vous <span class="design">servir</span> .
+          <?= PRINCIPAL_TEXT ?> <span class="design"><?= SERVE_TEXT ?></span> .
           </p>
         </div>
         <div class="find-me">
           <p><?= KNOW_TEXT ?></p>
-          <a href="">GitHub</a>
-          <a href="">Linkedin</a>
+          <a target="_blank" href="https://github.com/Helmi74130">GitHub</a>
+          <a  target="_blank" href="https://www.linkedin.com/in/helmi-el-maiel-developpeur-front-end-back-end-full-stack-css-html-javascript-php-react-symfony/">Linkedin</a>
         </div>
       </div>
       <div class="content-circle-left">
@@ -428,16 +427,29 @@
             </div>
           </div>
             <textarea required name="message" id="message" cols="30" rows="12" placeholder="<?= MESSAGE_TEXT ?>"></textarea>
-            <button class="button-tabs" id="submit"><?= SEND_BUTTON ?></button>
+            <button class="button-tabs g-recaptcha" 
+                    data-sitekey="6LeZrsYiAAAAAMYyclr_WoiUGNLAEVkvQczefaIX" 
+                    data-callback='onSubmit' 
+                    data-action='submit' 
+                    id="submit"><?= SEND_BUTTON ?></button>
         </form>
       </div>
     </section>
 
 </body>
+<script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="js/script.js"></script>
+<script type="module" src="js/script.js"></script>
+<script src="js/phonelanguage.js"></script>
+<script src="js/changeVideoSrc.js"></script>
+<script src="js/contactsecurity.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 </html>

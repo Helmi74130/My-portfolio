@@ -86,12 +86,12 @@ html{
 		span {
 			&:first-of-type {
 				transform: rotate(45deg);
-        background-color:$purple;
+        background-color:$green;
 				top: 5px;
 			}
 			&:last-of-type {
 				transform: rotate(-45deg);
-        background-color:$purple;
+        background-color:$green;
 				bottom: 5px;
 			}
 		}
@@ -171,6 +171,9 @@ html{
 }
 .language{
   margin-left: 20px;
+  img:hover{
+    cursor: pointer;
+  }
   .display{
     display: none;
   }
