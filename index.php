@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Développeur web Full Stack et passionné par l'informatique. Dans mon portfolio je vous présente mes projets et mes compétences">
+  <link rel="icon" type="image/png" href="img/helmi.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <title>Helmi El Maïel Développeur Full-Stack</title>
+  <title>Helmi El Maïel Développeur Full-Stack</title> 
 </head>
 <body>
   <?php
@@ -24,7 +26,7 @@
       <div>
         <p><?= DISCOVER ?></p>
         <nav>
-          <a class="effect-shine active" href="#project"><?= PROJECT?></a>
+          <a class="effect-shine" href="#project"><?= PROJECT?></a>
           <a class="effect-shine" href="#contact">Contact</a>
           <a class="effect-shine" href="#about"><?= ABOUT ?></a>
           <a class="effect-shine" href="#competence"><?= COMPETENCE ?></a>
@@ -40,7 +42,7 @@
           <img height="52px" width="52px" src="img/helmi.png" alt="logo du site">
         </a>
         <div class="language">
-          <img id="flag" height="32px" width="32px" src=<?= $_COOKIE['language'] === "fr" ? "icon/france.png" : "icon/royaume-uni.png";?>>
+          <img id="flag" height="32px" width="32px" src=<?= $_COOKIE['language'] === "fr" ? "icon/france.png" : "icon/royaume-uni.png";?> alt="drapeau de la france">
           <div id="textLanguage" class="text-language display">
             <a href="index.php?language=fr"><?= FRENCH ?></a>
             <a href="index.php?language=en"><?= ENGLISH ?></a>
@@ -69,8 +71,8 @@
     <div class="personal">
       <div class="personal-info">
         <h1><?= NAME_TEXT ?><span id="textWritter"></span></h1>
-        <p class="text-top"><?= PASSIONNED_TEXT ?></p>
-        <p class="text-bottom"><?= INTERET_TEXT?></p>
+        <p class="text-top"><?= INTERET_TEXT?></p>
+        <p class="text-bottom"><?= PASSIONNED_TEXT ?></p>
         <button class="glow-on-hover"><a href="#contact"><?= CONTACT_TEXT ?></a></button>
         <p class="project"><?= PROJECT_TEXT ?></p>
       </div>
@@ -188,13 +190,13 @@
           <div id="homePhone" class="home-phone">
             <div class="filter">
               <div class="header-call">
-                <img src="/img/dev.jpg" height="60px" alt="" srcset="">
+                <img src="/img/helmi.png" height="60px" alt="logo de mon site">
                 <p>Helmi</p>
                 <p><?= CALL_APP_TEXT ?></p>
               </div>
               <div class="main-call">
                 <div class="icon-call">
-                  <img src="/icon/phone.png" height="21px" alt="" srcset="">
+                  <img src="/icon/phone.png" height="21px" alt="icon d'un téléphone racroché">
                 </div>
                 <button id="acceptBtn" class="icon-call-reception">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -214,11 +216,21 @@
         </div>
       </div>
     </div>
+    <div class="mouse-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"  fill="currentColor"  class="bi bi-mouse" viewBox="0 0 16 16">
+        <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0v6zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z"/>
+      </svg>
+      <div class="chevron-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  class="bi bi-caret-down" viewBox="0 0 16 16">
+          <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+        </svg>
+      </div>
+    </div>
   </main>
   <!-- SECTION LEFT UP-->
   <div class="section">
     <div class="section-left">
-      <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><span class="design"><?= CONCEV_TEXT ?></span> <?= UNIQUE_TEXT ?> <br class="ligne"> <?= ELEGANTE_TEXT ?> <br class="ligne"> <?= ACCROCHE_TEXT ?> <img src="https://uploads-ssl.webflow.com/5f986747c748aa746b35ee7d/5f9cd8c2788d35c33317e409_geex-emoji%20-%2003.png" loading="lazy" alt="" class="emoji-second"></h2>
+      <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><span class="design"><?= CONCEV_TEXT ?></span> <?= UNIQUE_TEXT ?> <br class="ligne"> <?= ELEGANTE_TEXT ?> <br class="ligne"> <?= ACCROCHE_TEXT ?> <img src="https://uploads-ssl.webflow.com/5f986747c748aa746b35ee7d/5f9cd8c2788d35c33317e409_geex-emoji%20-%2003.png" loading="lazy" alt="Icone d'une fusée" class="emoji-second"></h2>
       <p data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="bottom-bottom"><?= STRATEGY_TEXT ?> <br class="ligne"> <?= ACTION_TEXT ?> <br class="ligne"> <?= REFER_TEXT ?></p>
     </div>
     <div class="section-right">
@@ -227,7 +239,7 @@
   <!-- SECTION LEFT DOWN-->
   <div class="section">
     <div class="section-left">
-      <h2 data-aos="fade-up" class="color" data-aos-anchor-placement="bottom-bottom"><span class="design"><?= IMAGINE_TEXT ?></span> <?= ENSEMBLE_TEXT ?> <br class="ligne"> <?= EMBOITE_TEXT ?> <br class="ligne"> <?= FORME_TEXT ?><span class="design"><?= YOU_TEXT ?></span> <?= WEBSITE_TEXT ?> <img src="img/screen.png" loading="lazy" alt="" class="emoji-third"></h2>
+      <h2 data-aos="fade-up" class="color" data-aos-anchor-placement="bottom-bottom"><span class="design"><?= IMAGINE_TEXT ?></span> <?= ENSEMBLE_TEXT ?> <br class="ligne"> <?= EMBOITE_TEXT ?> <br class="ligne"> <?= FORME_TEXT ?><span class="design"><?= YOU_TEXT ?></span> <?= WEBSITE_TEXT ?> <img src="img/screen.png" loading="lazy" alt="icone d'un site web" class="emoji-third"></h2>
       <p data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="bottom-bottom"><?= ESTHETIQUE_TEXT ?></p>
     </div>
     <div class="section-right">
@@ -245,7 +257,7 @@
             <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
           </svg></button>
         </div>
-        <p>Certain projet ne me permette pas de les publier, <br> si vous souhaitez en voir plus <a class="design" href="">contactez-moi !</a></p>
+        <p><?= GO_TEXT ?><br><?= MORE_TEXT ?><a class="design" href=""> <?= CONTACT_ME_TEXT ?></a></p>
       </div>
       <div class="project-right" data-aos="fade-up" data-aos-anchor-placement="top-center">
         <a id="linkForWebSite" target="_blank" href="https://illustre-restaurant.herokuapp.com/">
@@ -257,14 +269,14 @@
     </section>
   <!-- PANEL PROJECT-->
     <section class="project-panel-responsive">
-      <h4 class="project"><?= DISCOVER_TEXT.''.MY_PROJECT_TEXT ?></h4>
+      <h4 class="project"><?= DISCOVER_TEXT.' '.MY_PROJECT_TEXT ?></h4>
       <div class="container-panel-responsive">
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank" href="https://illustre-restaurant.herokuapp.com/"><img src="/img/illustreimg.png"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://richards-immobilier.herokuapp.com/"><img src="/img/richardsimg.png"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://earth-and-sea.herokuapp.com/"><img src="/img/earthimg.png"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://meteo-france-apps.herokuapp.com/"><img src="/img/meteoimg.png"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://whispering-falls-36328.herokuapp.com/"><img src="/img/orangeimg.png"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://dicerollthegame.herokuapp.com/"><img src="/img/diceimg.png"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank" href="https://illustre-restaurant.herokuapp.com/"><img src="/img/illustreimg.png" alt="image de mon site web l'illustre"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://richards-immobilier.herokuapp.com/"><img src="/img/richardsimg.png" alt="image de mon site web richard immobillier"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://earth-and-sea.herokuapp.com/"><img src="/img/earthimg.png" alt="image de mon site web earth & sea"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://meteo-france-apps.herokuapp.com/"><img src="/img/meteoimg.png" alt="image de mon site web meteo france"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://whispering-falls-36328.herokuapp.com/"><img src="/img/orangeimg.png" alt="image de mon site web orange bleu my admin"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://dicerollthegame.herokuapp.com/"><img src="/img/diceimg.png" alt="image de mon site web dice roll"/></a>
       </div>
     </section>
     <!-- PANEL COMPETENCE -->
@@ -278,7 +290,7 @@
           </div>
           <div>
             <h6><?= CONCEPT_TITLE ?></h6>
-            <p><?= CONCEPT_TITLE_TEXT ?>/p>
+            <p><?= CONCEPT_TITLE_TEXT ?></p>
           </div>
           <div>
             <h6><?= DEV_TITLE ?></h6>
@@ -286,55 +298,55 @@
           </div>
           <div>
             <h6><?= DEP_TITLE ?></h6>
-            <p><?= DEV_TITLE_TEXT ?></p>
+            <p><?= DEP_TITLE_TEXT ?></p>
           </div>
         </div>
       </div>
       <div class="panel-right">
         <div class="icon-panel">
-          <img src="icon/html.png" height="100px" alt="" srcset="">
+          <img src="icon/html.png" height="100px"  srcset="icone html">
         </div>
         <div class="icon-panel">
-          <img src="icon/css.png" height="100px" alt="" srcset="">
+          <img src="icon/css.png" height="100px"  srcset="icone css">
         </div>
         <div class="icon-panel">
-          <img  src="icon/js.png" height="100px" alt="" srcset="">
+          <img  src="icon/js.png" height="100px"  srcset="icone javascript">
         </div>
         <div class="icon-panel">
-          <img  src="icon/bootstrap.png" height="150px" alt="" srcset="">
+          <img  src="icon/bootstrap.png" height="150px"  srcset="icone bootstrap">
         </div>
         <div class="icon-panel">
-          <img  src="icon/react.png" height="100px" alt="" srcset="">
+          <img  src="icon/react.png" height="100px"  srcset="icone react.js">
         </div>
         <div class="icon-panel">
-          <img  src="icon/firebase.png" height="100px" alt="" srcset="">
+          <img  src="icon/firebase.png" height="100px"  srcset="icone firebase">
         </div>
         <div class="icon-panel">
-          <img  src="icon/nodejs.png" height="100px" alt="" srcset="">
+          <img  src="icon/nodejs.png" height="100px"  srcset="icone nodejs">
         </div>
         <div class="icon-panel">
-          <img  src="icon/directus.png" height="120px" alt="" srcset="">
+          <img  src="icon/directus.png" height="120px"  srcset="icone directus">
         </div>
         <div class="icon-panel">
-          <img src="icon/sass.png" height="100px" alt="" srcset="">
+          <img src="icon/sass.png" height="100px"  srcset="icone sass">
         </div>
         <div class="icon-panel">
-          <img class="teste" src="icon/query.png" height="100px" alt="" srcset="">
+          <img class="teste" src="icon/query.png" height="100px"  srcset="icone jquery">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/php.png" height="100px" alt="" srcset="">
+          <img class="mt" src="icon/php.png" height="100px"  srcset="icone php">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/git.png" height="100px" alt="" srcset="">
+          <img class="mt" src="icon/git.png" height="100px"  srcset="icone github">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/sql.png" height="100px" alt="" srcset="">
+          <img class="mt" src="icon/sql.png" height="100px"  srcset="icone sql">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/wordpress.png" height="100px" alt="" srcset="">
+          <img class="mt" src="icon/wordpress.png" height="100px"  srcset="icone wordpress">
         </div>
         <div class="icon-panel ">
-          <img class="mt" src="icon/symfony.png" height="100px" alt="" srcset="">
+          <img class="mt" src="icon/symfony.png" height="100px"  srcset="icone symfony">
         </div>
       </div>
     </section>
@@ -343,13 +355,9 @@
       <div class="about-content">
         <h2><?= ABOUT_TITLE ?></h2>
         <div class="text-about">
-          <p>Avant d'etre développeur je suis avant tout <span class="design">Helmi EL Maiel</span>, j'ai étudié chez Studi en tant que Graduate Développeur Full-Stack</p><br>
-          <p>
-            J'ai appris énormément durant mes études, et surtout avec la mise en pratique! J'aime coder et concevoir des interfaces innovantes.
-          </p><br>
-          <p>
-          <?= PRINCIPAL_TEXT ?> <span class="design"><?= SERVE_TEXT ?></span> .
-          </p>
+          <p><span class="design">Helmi EL Maiel,</span><?= ABOUT_TEXT ?></p><br>
+          <p><?= SUB_ABOUT_TEXT ?></p><br>
+          <p><?= PRINCIPAL_TEXT ?> <span class="design"><?= SERVE_TEXT ?></span></p>
         </div>
         <div class="find-me">
           <p><?= KNOW_TEXT ?></p>
@@ -405,20 +413,20 @@
         <div class="circle-contact"></div>
       </div>
       <div class="contact-right">
-        <form method="POST" action="php/form.php">
+        <form id="formContact" method="POST" action="php/form.php" >
           <div class="form-content">
               <div>
-                <input name="name" id="name" type="text" required placeholder="<?= NAME ?>*">
+                <input name="name" id="name" type="text" required placeholder="<?= NAME ?> *">
                 <p id="textName"></p>
               </div>
               <div>
-                <input name="firstname" id="firstname" type="text" required placeholder="<?= FIRSTNAME_TEXT ?>*">
+                <input name="firstname" id="firstname" type="text" required placeholder="<?= FIRSTNAME_TEXT ?> *">
                 <p id="textFirstname"></p>
               </div>
           </div>
           <div class="form-content">
             <div>
-              <input name="email" id="mail" type="mail" required placeholder="E-mail*">
+              <input name="email" id="mail" type="mail" required placeholder="E-mail *">
               <p id="textEmail"></p>
             </div>
             <div>
@@ -427,19 +435,19 @@
             </div>
           </div>
             <textarea required name="message" id="message" cols="30" rows="12" placeholder="<?= MESSAGE_TEXT ?>"></textarea>
-            <button class="button-tabs g-recaptcha" 
+            <button id="submit"
+                    class="button-tabs g-recaptcha" 
                     data-sitekey="6LeZrsYiAAAAAMYyclr_WoiUGNLAEVkvQczefaIX" 
                     data-callback='onSubmit' 
-                    data-action='submit' 
-                    id="submit"><?= SEND_BUTTON ?></button>
+                    data-action='Envoyer' 
+                    >Envoyer</button>
         </form>
       </div>
     </section>
-
 </body>
 <script>
    function onSubmit(token) {
-     document.getElementById("demo-form").submit();
+     document.getElementById("formContact").submit();
    }
  </script>
 <script src="https://www.google.com/recaptcha/api.js"></script>

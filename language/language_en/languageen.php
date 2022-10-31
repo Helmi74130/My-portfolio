@@ -4,12 +4,11 @@ define("NAME_TEXT","I'am Helmi");
 
 define("PASSIONNED_TEXT","And, above all, passionate about what I do!");
 
-define("INTERET_TEXT","An interest in design and innovative interfaces and a great deal of imagination");
+define("INTERET_TEXT","An interest in design, innovative interfaces and a sense of detail");
 
 define("CONTACT_TEXT","Let's chat !");
 
-define("PROJECT_TEXT","Several finished projects are in progress but first of all let's start");
-
+define("PROJECT_TEXT","Let's start a new adventure");
 
 define("ONLINE_TEXT", "online");
 
@@ -19,25 +18,25 @@ define("CALL_APP_TEXT", "WhatsApp voice call");
 
 define("RESPOND_TEXT", "Swipe up <br> to accept");
 
-define("CONCEV_TEXT", 'let\'s design');
+define("CONCEV_TEXT", 'Let\'s design');
 
 define("UNIQUE_TEXT", " a unique experience,");
 
-define("ELEGANTE_TEXT", " elegant and at the same time");
+define("ELEGANTE_TEXT", " harmonious and who looks");
 
-define("ACCROCHE_TEXT", " catchy !");
+define("ACCROCHE_TEXT", " like you !");
 
-define("STRATEGY_TEXT", "An SEO strategy");
+define("STRATEGY_TEXT", "An SEO strategy and an action plan");
 
-define("ACTION_TEXT", " and an action plan to optimize");
+define("ACTION_TEXT", "to optimize natural referencing.");
 
-define("REFER_TEXT", " natural referencing.");
+define("REFER_TEXT", "");
 
 define("IMAGINE_TEXT", "Imagine");
 
 define("ENSEMBLE_TEXT", " a set of bricks, ");
 
-define("EMBOITE_TEXT", " that overlap each other ");
+define("EMBOITE_TEXT", " that fit together");
 
 define("FORME_TEXT", " to form ");
 
@@ -71,7 +70,11 @@ define("DEP_TITLE_TEXT", "Domain name and hosting");
 
 define("ABOUT_TITLE", "Who am I?");
 
-define("KNOW_TEXT", "To know me better - ");
+define("ABOUT_TEXT", "web and mobile web developer. Former student at Studi as a Graduate Full-Stack Developer level 5 professional title");
+
+define("SUB_ABOUT_TEXT", "During my studies, I acquired all the necessary skills allowing me to design and develop modern and dynamic applications and websites. I like to code and design innovative interfaces.");
+
+define("KNOW_TEXT", "Get to know me better -");
 
 define("RESPOND_FAST_TEXT", "I will answer you as soon as possible");
 
@@ -97,6 +100,12 @@ define("FRENCH", "French");
 
 define("ENGLISH", "English");
 
-define("PRINCIPAL_TEXT", "My main focus is on you");
+define("PRINCIPAL_TEXT", "My main goal  is to respond to your");
 
-define("SERVE_TEXT", "to serve");
+define("SERVE_TEXT", "expectations");
+
+define("GO_TEXT", "Click on the tablet to access the site. ");
+
+define("MORE_TEXT", "If you want to see more");
+
+define("CONTACT_ME_TEXT", "contact me !");

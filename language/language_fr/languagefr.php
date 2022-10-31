@@ -2,13 +2,13 @@
 
 define("NAME_TEXT","Moi c'est Helmi");
 
-define("PASSIONNED_TEXT","Et, avant tout passionné par ce que je fait!");
+define("INTERET_TEXT","Disposant d'un intérêt pour le design, les interfaces innovantes <br/> et le sens du détail"); 
 
-define("INTERET_TEXT","Un intérêt pour le design et les interfaces innovantes et une grande part d'imagination");
+define("PASSIONNED_TEXT","Et, avant tout passionné par ce que je fait !");
 
 define("CONTACT_TEXT","Contactez-moi !");
 
-define("PROJECT_TEXT","Plusieurs projets terminés est en cours mais avant toute chose commençons");
+define("PROJECT_TEXT","Débutons une toute nouvelle aventure");
 
 define("ONLINE_TEXT", "en ligne");
 
@@ -22,9 +22,9 @@ define("CONCEV_TEXT", 'Concevons');
 
 define("UNIQUE_TEXT", " une expérience unique,");
 
-define("ELEGANTE_TEXT", " élégante et à la fois");
+define("ELEGANTE_TEXT", "harmonieuse et qui");
 
-define("ACCROCHE_TEXT", " accrocheuse !");
+define("ACCROCHE_TEXT", "vous resemble !");
 
 define("STRATEGY_TEXT", "Une stratégie SEO");
 
@@ -34,9 +34,9 @@ define("REFER_TEXT", " le référencement naturel.");
 
 define("IMAGINE_TEXT", "Imaginons");
 
-define("ENSEMBLE_TEXT", " un ensemble de brique, ");
+define("ENSEMBLE_TEXT", " un ensemble de briques, ");
 
-define("EMBOITE_TEXT", " qui s'emboitent les uns aux autres ");
+define("EMBOITE_TEXT", " qui s'assemblent les uns aux autres ");
 
 define("FORME_TEXT", " pour former ");
 
@@ -48,21 +48,21 @@ define("ESTHETIQUE_TEXT", "Une esthétique clair à la fois ergonomique <br> et 
 
 define("DISCOVER_TEXT", "Découvrez");
 
-define("MY_PROJECT_TEXT", "mes projets");
+define("MY_PROJECT_TEXT", " mes projets");
 
 define("COMPETENCE_TEXT", "Mes competences");
 
 define("PROJECT_TITLE", "Gestion des projets web");
 
-define("PROJECT_TITLE_TEXT", "Site vitrine, évènementiel, e-commerce, refonte, single page application");
+define("PROJECT_TITLE_TEXT", "Site vitrine, évènementiel, e-commerce, refonte");
 
 define("CONCEPT_TITLE", "Conception graphique et design");
 
-define("CONCEPT_TITLE_TEXT", "Maquettage, user stories, wireframes, interfaces web, accessibilité visuelle");
+define("CONCEPT_TITLE_TEXT", "Maquettage, wireframes, interfaces web, accessibilité visuelle");
 
 define("DEV_TITLE", "Développement d'applications multi-plateformes");
 
-define("DEV_TITLE_TEXT", "Site Compatible tous supports, tablette et application mobile");
+define("DEV_TITLE_TEXT", "Site Compatible tous supports, tablette et mobile");
 
 define("DEP_TITLE", "Deploiement d'application web");
 
@@ -70,7 +70,11 @@ define("DEP_TITLE_TEXT", "Nom de domaine et hébergement");
 
 define("ABOUT_TITLE", "Qui suis-je?");
 
-define("KNOW_TEXT", "Pour mieux me connaitre - ");
+define("ABOUT_TEXT", "développeur web et web Mobile. Ancien étudiant chez Studi en tant que Graduate Développeur Full-Stack titre professionelle de niveau 5");
+
+define("SUB_ABOUT_TEXT", "Durant mes études, j'ai acquis toutes les compétences nécessaires me permettant de concevoir et développer des applications et des sites web modernes et dynamiques. J'aime coder et concevoir des interfaces innovantes.");
+
+define("KNOW_TEXT", "Mieux me connaître -");
 
 define("RESPOND_FAST_TEXT", "Je vous répondrais au plus vite");
 
@@ -96,6 +100,12 @@ define("FRENCH", "Francais");
 
 define("ENGLISH", "Anglais");
 
-define("PRINCIPAL_TEXT", "Mon principal objectif est de vous");
+define("PRINCIPAL_TEXT", "Mon principal objectif est de répondre à vos ");
 
-define("SERVE_TEXT", "servir");
+define("SERVE_TEXT", "attentes");
+
+define("GO_TEXT", "Cliquez sur la tablette pour acceder au site. ");
+
+define("MORE_TEXT", "Si vous souhaitez en voir plus");
+
+define("CONTACT_ME_TEXT", "contactez-moi !");

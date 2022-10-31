@@ -4,6 +4,7 @@ const textName = document.querySelector('#textName')
 const mail = document.querySelector('#mail')
 const inputFirstname = document.querySelector('#firstname')
 const inputName = document.querySelector('#name')
+const submit = document.querySelector('#submit')
 
 
 /**

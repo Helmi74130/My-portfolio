@@ -18,9 +18,9 @@ const timeMessage = document.querySelectorAll('.time')
 const acceptBtn = document.querySelector('#acceptBtn')
 const homePhone = document.querySelector('#homePhone')
 const smartphoneDiv = document.querySelector('#smartphoneDiv')
-const submit = document.querySelector('#submit')
 const flag = document.querySelector('#flag')
 const textLanguage = document.querySelector('#textLanguage')
+
 
   /**
    * Toggle class display onclick to the flag
@@ -89,6 +89,13 @@ const textLanguage = document.querySelector('#textLanguage')
   * remove class and add class in the phone when scroll
   */
   addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      document.querySelector('.mouse-arrow').classList.add('close')
+      document.querySelector('.mouse-arrow').classList.remove("open")
+    }else{
+      document.querySelector('.mouse-arrow').classList.add("open")
+      document.querySelector('.mouse-arrow').classList.remove("close")
+    }
     if (window.scrollY > 1150) {
       smartphoneDiv.classList.add("close")
       smartphoneDiv.classList.remove("open")
@@ -97,6 +104,7 @@ const textLanguage = document.querySelector('#textLanguage')
       smartphoneDiv.classList.remove("close")
       smartphoneDiv.classList.add("open")
     }
+
   }); 
 
   phoneButton.addEventListener('click', ()=>{
@@ -190,6 +198,9 @@ const textLanguage = document.querySelector('#textLanguage')
       Layer.style.transform = `translateX(${x}px) translateY(${y}px)`
     })
   }
+
+
+  console.log('J\'espère que ma présentation vous a plu, bonne visite sur mon code et dite moi si vous avez apprécié.');
 
 
 
