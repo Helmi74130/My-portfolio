@@ -2,13 +2,13 @@
 
 // Secure the form
 if(isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['message'])){
-  $secret="6LeZrsYiAAAAAOao5Cu9xIM_ggeAT4r4CKz8X9_d";
+  /* $secret="6LeZrsYiAAAAAOao5Cu9xIM_ggeAT4r4CKz8X9_d";
   $response= htmlspecialchars($_POST['g-recaptcha-response']);
   $remoteip= $_SERVER['REMOTE_ADDR'];
   $request = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
 
   $get = file_get_contents($request);
-  $decode = json_decode($get, true);
+  $decode = json_decode($get, true); */
 
  /*  if($decode['success']){
     echo 'ok';

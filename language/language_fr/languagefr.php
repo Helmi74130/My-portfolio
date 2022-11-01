@@ -4,7 +4,7 @@ define("NAME_TEXT","Moi c'est Helmi");
 
 define("INTERET_TEXT","Disposant d'un intérêt pour le design, les interfaces innovantes <br/> et le sens du détail"); 
 
-define("PASSIONNED_TEXT","Et, avant tout passionné par ce que je fait !");
+define("PASSIONNED_TEXT","Et, avant tout passionné par ce que je fais !");
 
 define("CONTACT_TEXT","Contactez-moi !");
 
@@ -24,11 +24,11 @@ define("UNIQUE_TEXT", " une expérience unique,");
 
 define("ELEGANTE_TEXT", "harmonieuse et qui");
 
-define("ACCROCHE_TEXT", "vous resemble !");
+define("ACCROCHE_TEXT", "vous ressemble !");
 
 define("STRATEGY_TEXT", "Une stratégie SEO");
 
-define("ACTION_TEXT", " est un plan d'action permettant d'optimiser");
+define("ACTION_TEXT", " et un plan d'action permettant d'optimiser");
 
 define("REFER_TEXT", " le référencement naturel.");
 
@@ -44,7 +44,7 @@ define("YOU_TEXT", "votre");
 
 define("WEBSITE_TEXT", " site ! ");
 
-define("ESTHETIQUE_TEXT", "Une esthétique clair à la fois ergonomique <br> et responsive qui s'adaptera sur tous vos <br> appareils...");
+define("ESTHETIQUE_TEXT", "Une esthétique claire à la fois ergonomique <br> et responsive qui s'adaptera sur tous vos <br> appareils...");
 
 define("DISCOVER_TEXT", "Découvrez");
 
@@ -64,13 +64,13 @@ define("DEV_TITLE", "Développement d'applications multi-plateformes");
 
 define("DEV_TITLE_TEXT", "Site Compatible tous supports, tablette et mobile");
 
-define("DEP_TITLE", "Deploiement d'application web");
+define("DEP_TITLE", "Déploiement d'application web");
 
 define("DEP_TITLE_TEXT", "Nom de domaine et hébergement");
 
 define("ABOUT_TITLE", "Qui suis-je?");
 
-define("ABOUT_TEXT", "développeur web et web Mobile. Ancien étudiant chez Studi en tant que Graduate Développeur Full-Stack titre professionelle de niveau 5");
+define("ABOUT_TEXT", " développeur web et web Mobile. Ancien étudiant chez Studi en tant que Graduate Développeur Full-Stack titre professionnelle de niveau 5");
 
 define("SUB_ABOUT_TEXT", "Durant mes études, j'ai acquis toutes les compétences nécessaires me permettant de concevoir et développer des applications et des sites web modernes et dynamiques. J'aime coder et concevoir des interfaces innovantes.");
 
@@ -80,9 +80,9 @@ define("RESPOND_FAST_TEXT", "Je vous répondrais au plus vite");
 
 define("SEND_BUTTON", "Envoyer");
 
-define("NAME", "Nom");
+define("NAME", "Nom ");
 
-define("FIRSTNAME_TEXT", "Prénom");
+define("FIRSTNAME_TEXT", "Prénom ");
 
 define("PHONE_TEXT", "Téléphone");
 

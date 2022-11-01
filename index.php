@@ -111,7 +111,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
                   </svg>
-                  <img src="/img/dev.jpg" height="30" alt="avatar d'un developpeur" srcset="">
+                  <img src="/img/dev.jpg" height="30" alt="avatar d'un developpeur">
                   <div>
                     <p>Helmi</p>
                     <p><?= ONLINE_TEXT ?></p>
@@ -304,49 +304,49 @@
       </div>
       <div class="panel-right">
         <div class="icon-panel">
-          <img src="icon/html.png" height="100px"  srcset="icone html">
+          <img src="icon/html.png" height="100px"  alt="icone html">
         </div>
         <div class="icon-panel">
-          <img src="icon/css.png" height="100px"  srcset="icone css">
+          <img src="icon/css.png" height="100px"  alt="icone css">
         </div>
         <div class="icon-panel">
-          <img  src="icon/js.png" height="100px"  srcset="icone javascript">
+          <img  src="icon/js.png" height="100px"  alt="icone javascript">
         </div>
         <div class="icon-panel">
-          <img  src="icon/bootstrap.png" height="150px"  srcset="icone bootstrap">
+          <img  src="icon/bootstrap.png" height="150px"  alt="icone bootstrap">
         </div>
         <div class="icon-panel">
-          <img  src="icon/react.png" height="100px"  srcset="icone react.js">
+          <img  src="icon/react.png" height="100px"  alt="icone react.js">
         </div>
         <div class="icon-panel">
-          <img  src="icon/firebase.png" height="100px"  srcset="icone firebase">
+          <img  src="icon/firebase.png" height="100px"  alt="icone firebase">
         </div>
         <div class="icon-panel">
-          <img  src="icon/nodejs.png" height="100px"  srcset="icone nodejs">
+          <img  src="icon/nodejs.png" height="100px"  alt="icone nodejs">
         </div>
         <div class="icon-panel">
-          <img  src="icon/directus.png" height="120px"  srcset="icone directus">
+          <img  src="icon/directus.png" height="120px" alt="icone directus">
         </div>
         <div class="icon-panel">
-          <img src="icon/sass.png" height="100px"  srcset="icone sass">
+          <img src="icon/sass.png" height="100px"  alt="icone sass">
         </div>
         <div class="icon-panel">
-          <img class="teste" src="icon/query.png" height="100px"  srcset="icone jquery">
+          <img class="teste" src="icon/query.png" height="100px"  alt="icone jquery">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/php.png" height="100px"  srcset="icone php">
+          <img class="mt" src="icon/php.png" height="100px"  alt="icone php">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/git.png" height="100px"  srcset="icone github">
+          <img class="mt" src="icon/git.png" height="100px"  alt="icone github">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/sql.png" height="100px"  srcset="icone sql">
+          <img class="mt" src="icon/sql.png" height="100px"  alt="icone sql">
         </div>
         <div class="icon-panel">
-          <img class="mt" src="icon/wordpress.png" height="100px"  srcset="icone wordpress">
+          <img class="mt" src="icon/wordpress.png" height="100px"  alt="icone wordpress">
         </div>
         <div class="icon-panel ">
-          <img class="mt" src="icon/symfony.png" height="100px"  srcset="icone symfony">
+          <img class="mt" src="icon/symfony.png" height="100px"  alt="icone symfony">
         </div>
       </div>
     </section>
@@ -435,22 +435,11 @@
             </div>
           </div>
             <textarea required name="message" id="message" cols="30" rows="12" placeholder="<?= MESSAGE_TEXT ?>"></textarea>
-            <button id="submit"
-                    class="button-tabs g-recaptcha" 
-                    data-sitekey="6LeZrsYiAAAAAMYyclr_WoiUGNLAEVkvQczefaIX" 
-                    data-callback='onSubmit' 
-                    data-action='Envoyer' 
-                    >Envoyer</button>
+            <button id="submit" class="button-tabs">Envoyer</button>
         </form>
       </div>
     </section>
 </body>
-<script>
-   function onSubmit(token) {
-     document.getElementById("formContact").submit();
-   }
- </script>
-<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
