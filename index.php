@@ -263,7 +263,7 @@
         <p><?= GO_TEXT ?><br><?= MORE_TEXT ?><a class="design" href=""> <?= CONTACT_ME_TEXT ?></a></p>
       </div>
       <div class="project-right" data-aos="fade-up" data-aos-anchor-placement="top-center">
-        <a id="linkForWebSite" target="_blank" href="https://illustre-restaurant.herokuapp.com/">
+        <a id="linkForWebSite" target="_blank" href="https://illustre-restaurant.helmi-elmaiel-portfolio.fr/">
           <div class='ipad'>
             <video class="" id="videoTablette" autoplay muted loop  src="video/illustre.mp4" type="video/mp4"></video>
           </div>  
@@ -274,12 +274,12 @@
     <section class="project-panel-responsive">
       <h4 class="project"><?= DISCOVER_TEXT.' '.MY_PROJECT_TEXT ?></h4>
       <div class="container-panel-responsive">
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank" href="https://illustre-restaurant.herokuapp.com/"><img src="/img/illustreimg.png" alt="image de mon site web l'illustre"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://richards-immobilier.herokuapp.com/"><img src="/img/richardsimg.png" alt="image de mon site web richard immobillier"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://earth-and-sea.herokuapp.com/"><img src="/img/earthimg.png" alt="image de mon site web earth & sea"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://meteo-france-apps.herokuapp.com/"><img src="/img/meteoimg.png" alt="image de mon site web meteo france"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank" href="https://illustre-restaurant.helmi-elmaiel-portfolio.fr/"><img src="/img/illustreimg.png" alt="image de mon site web l'illustre"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://richards-immo.online/"><img src="/img/richardsimg.png" alt="image de mon site web richard immobillier"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://sandrine-coupart.online/"><img src="/img/sandrine.png" alt="image de mon site web dice roll"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://earth-and-sea.helmi-elmaiel-portfolio.fr/"><img src="/img/earthimg.png" alt="image de mon site web earth & sea"/></a>
+        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://meteo-france.helmi-elmaiel-portfolio.fr/"><img src="/img/meteoimg.png" alt="image de mon site web meteo france"/></a>
         <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://whispering-falls-36328.herokuapp.com/"><img src="/img/orangeimg.png" alt="image de mon site web orange bleu my admin"/></a>
-        <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://dicerollthegame.herokuapp.com/"><img src="/img/diceimg.png" alt="image de mon site web dice roll"/></a>
       </div>
     </section>
     <!-- PANEL COMPETENCE -->
