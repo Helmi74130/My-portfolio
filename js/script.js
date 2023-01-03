@@ -88,6 +88,8 @@ const textLanguage = document.querySelector('#textLanguage')
   /**
   * remove class and add class in the phone when scroll
   */
+ let btnWhatsapp = document.querySelector('.whatsapp-contact')
+
   addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       document.querySelector('.mouse-arrow').classList.add('close')
@@ -97,6 +99,8 @@ const textLanguage = document.querySelector('#textLanguage')
       document.querySelector('.mouse-arrow').classList.remove("close")
     }
     if (window.scrollY > 1150) {
+      btnWhatsapp.classList.remove('none')
+      btnWhatsapp.classList.add('bounce-in-left')
       smartphoneDiv.classList.add("close")
       smartphoneDiv.classList.remove("open")
     }
