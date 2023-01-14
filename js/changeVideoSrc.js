@@ -5,7 +5,7 @@
  */
 
 const urlSource =['video/mywebsite.mp4', 'video/illustre.mp4', 'video/richard.mp4', 'video/nike.mp4', 'video/sandrine.mp4', 'video/shampoo.mp4', 'video/earth.mp4', 'video/orange.mp4', 'video/meteo.mp4' ]
-const url =['https://e-website.fr/', 'https://illustre-restaurant.helmi-elmaiel-portfolio.fr/', 'https://richards-immo.online/',  'https://nike-air-max.richards-immo.online/', 'https://sandrine-coupart.online/' , 'https://shampoo-performance.helmi-elmaiel-portfolio.fr/', 'https://earth-and-sea.helmi-elmaiel-portfolio.fr/', 'https://whispering-falls-36328.herokuapp.com/', 'https://meteo-france.helmi-elmaiel-portfolio.fr/' ]
+const url =['https://e-website.fr/', 'https://illustre-restaurant.helmi-elmaiel-portfolio.fr/', 'https://richards-immo.online/',  'https://nike-air-max.richards-immo.online/', 'https://sandrine-coupart.online/' , 'https://shampoo-performance.helmi-elmaiel-portfolio.fr/', 'https://earth-and-sea.helmi-elmaiel-portfolio.fr/', 'https://orange-myapps.online/', 'https://meteo-france.helmi-elmaiel-portfolio.fr/' ]
 
 let index = 0
 next.addEventListener('click', ()=>{
