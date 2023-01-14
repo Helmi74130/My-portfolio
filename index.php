@@ -272,9 +272,9 @@
         <p><?= GO_TEXT ?><br><?= MORE_TEXT ?><a class="design" href=""> <?= CONTACT_ME_TEXT ?></a></p>
       </div>
       <div class="project-right" data-aos="fade-up" data-aos-anchor-placement="top-center">
-        <a id="linkForWebSite" target="_blank" href="https://illustre-restaurant.helmi-elmaiel-portfolio.fr/">
+        <a id="linkForWebSite" target="_blank" href="https://e-website.fr/">
           <div class='ipad'>
-            <video class="" id="videoTablette" autoplay muted loop  src="video/illustre.mp4" type="video/mp4"></video>
+            <video class="" id="videoTablette" autoplay muted loop  src="video/mywebsite.mp4" type="video/mp4"></video>
           </div>  
         </a>
       </div>
@@ -283,6 +283,7 @@
     <section class="project-panel-responsive">
       <h4 class="project"><?= DISCOVER_TEXT.' '.MY_PROJECT_TEXT ?></h4>
       <div class="container-panel-responsive">
+      <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank" href="https://e-website.fr/"><img src="/img/mywebsite.png" alt="image de mon site web e-website"/></a>
         <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank" href="https://illustre-restaurant.helmi-elmaiel-portfolio.fr/"><img src="/img/illustreimg.png" alt="image de mon site web l'illustre"/></a>
         <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://richards-immo.online/"><img src="/img/richardsimg.png" alt="image de mon site web richard immobillier"/></a>
         <a data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" target="_blank"  href="https://nike-air-max.richards-immo.online/"><img src="/img/nike.png" alt="image de mon site web nike"/></a>
